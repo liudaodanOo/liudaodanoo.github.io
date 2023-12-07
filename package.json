@@ -1,24 +1,25 @@
 {
-  "name": "markdown",
-  "version": "1.0.0",
-  "description": "基于vitepress的个人随笔",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vitepress dev",
-    "docs:build": "vitepress build",
-    "docs:preview": "vitepress preview"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git@gitee.com:liudaodanOo/markdown.git"
-  },
-  "author": "liudaodanOo",
-  "license": "ISC",
-  "dependencies": {
-    "vitepress": "^1.0.0-rc.31"
-  },
-  "devDependencies": {
-    "prettier": "^3.1.0"
-  }
+	"name": "markdown",
+	"version": "1.0.0",
+	"description": "基于vitepress的个人随笔",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1",
+		"docs:dev": "vitepress dev",
+		"docs:build": "vitepress build",
+		"docs:preview": "vitepress preview",
+		"deploy": "sudo bash ./deploy.sh"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git@gitee.com:liudaodanOo/markdown.git"
+	},
+	"author": "liudaodanOo",
+	"license": "ISC",
+	"dependencies": {
+		"vitepress": "^1.0.0-rc.31"
+	},
+	"devDependencies": {
+		"prettier": "^3.1.0"
+	}
 }

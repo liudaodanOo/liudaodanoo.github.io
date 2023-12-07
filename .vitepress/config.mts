@@ -1,8 +1,6 @@
 import { defineConfig } from 'vitepress';
 import SideBars from './sidebar';
 
-console.log('SideBars', SideBars);
-
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
 	title: '🍭🐳刘捣蛋的随笔',
