@@ -9,60 +9,65 @@ images_path=images
 bundle_path=.vitepress/dist
 dist_path=dist
 
+function echoRed() {
+  echo -e "\033[31m>>>>> $1\033[0m"
+}
+
 # 开始打包
-echo -e "\033[31m>>>>> 开始打包\033[0m"
+echoRed '开始打包'
 yarn run docs:build
 
 # 删除根目录下的dist
-echo -e "\033[31m>>>>> 删除根目录下的dist\033[0m"
+echoRed '删除根目录下的dist'
 if [ -d "$dist_path" ]; then
   rm -rf "$dist_path"
 fi
 
 # 复制图片
+echoRed '复制图片'
 cp  -r "$images_path" "$bundle_path"
 
 # 移动dist
-echo -e "\033[31m>>>>> 移动dist\033[0m"
+echoRed '移动dist'
 mv -f "$bundle_path" "$dist_path"
 
 # 切换分支
-echo -e "\033[31m>>>>> 切换分支\033[0m"
+echoRed '切换分支'
 git checkout gh-pages
 
 # 将..gitignore node_modules移动到dist
-echo -e "\033[31m>>>>> 将.gitignore node_modules移动到dist\033[0m"
+echoRed '将.gitignore node_modules移动到dist'
 mv .gitignore "$dist_path"
 mv node_modules "$dist_path"
 
 # 将dist移动到上层目录
-echo -e "\033[31m>>>>> 将dist移动到上层目录\033[0m"
+echoRed '将dist移动到上层目录'
 mv "$dist_path" ../"$dist_path"
 
 # 删除当前目录所有文件
-echo -e "\033[31m>>>>> 删除当前目录所有文件\033[0m"
+echoRed '删除当前目录所有文件'
 git rm -rf .
 
 # 将dist目录下的文件移到当前目录
-echo -e "\033[31m>>>>> 将dist目录下的文件移到当前目录\033[0m"
+echoRed '将dist目录下的文件移到当前目录'
 mv ../"$dist_path" .
 mv "$dist_path"/.gitignore .
 mv "$dist_path"/node_modules .
 mv -f "$dist_path"/* .
 
 # 删除dist目录
-echo -e "\033[31m>>>>> 删除dist目录\033[0m"
+echoRed '删除dist目录'
 rm  -rf "$dist_path"
 
 # 加至暂存区并提交
-echo -e "\033[31m>>>>> 加至暂存区并提交\033[0m"
+echoRed '加至暂存区并提交'
 git add .
 git commit -m "build: 📦打包"
 git push origin
 git push -f github
 
 # 返回master分支
-echo -e "\033[31m>>>>> 返回master分支\033[0m"
+echoRed '返回master分支'
 git checkout master
 
 echo -e "\033[32m操作完成\033[0m"
