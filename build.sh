@@ -21,7 +21,6 @@ cp  -r "$images_path" "$bundle_path"
 
 # 移动dist
 mv -f "$bundle_path" "$dist_path"
-chown 777 "$dist_path"
 
 # 切换分支
 git checkout gh-pages
