@@ -26,5 +26,5 @@ features:
     details: 记录一些 digiwin 的网址、流程
   - icon: 🛠️
     title: 使用的技术栈
-    details: VitePress + Gitee.io
+    details: VitePress + Git Pages
 ---
