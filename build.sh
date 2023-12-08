@@ -30,9 +30,8 @@ mv -f "$bundle_path" "$dist_path"
 echo -e "\033[31m>>>>> 切换分支\033[0m"
 git checkout gh-pages
 
-# 将.git .gitignore node_modules移动到dist
-echo -e "\033[31m>>>>> 将.git .gitignore node_modules移动到dist\033[0m"
-mv .git "$dist_path"
+# 将..gitignore node_modules移动到dist
+echo -e "\033[31m>>>>> 将.gitignore node_modules移动到dist\033[0m"
 mv .gitignore "$dist_path"
 mv node_modules "$dist_path"
 
@@ -42,15 +41,11 @@ mv "$dist_path" ../"$dist_path"
 
 # 删除当前目录所有文件
 echo -e "\033[31m>>>>> 删除当前目录所有文件\033[0m"
-cd ..
-rm -rf "$proj_name" 
-mkdir "$proj_name"
-cd "$proj_name"
+git rm -rf .
 
 # 将dist目录下的文件移到当前目录
 echo -e "\033[31m>>>>> 将dist目录下的文件移到当前目录\033[0m"
-mv ../"$dist_path" "$dist_path"
-mv "$dist_path"/.git .
+mv ../"$dist_path" .
 mv "$dist_path"/.gitignore .
 mv "$dist_path"/node_modules .
 mv -f "$dist_path"/* .
