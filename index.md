@@ -4,7 +4,7 @@ layout: home
 
 hero:
   name: '🍭🐳刘捣蛋的随笔'
-  text: '基于 VitePress + Gitee.io 的随笔博客'
+  text: '基于 VitePress + Git Pages 的随笔博客'
   tagline: 用于整理碎片知识
   image:
     src: /images/you.jpg
