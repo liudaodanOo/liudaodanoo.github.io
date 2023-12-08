@@ -8,7 +8,7 @@
 		"docs:dev": "vitepress dev",
 		"docs:build": "vitepress build",
 		"docs:preview": "vitepress preview",
-		"deploy": "sudo bash ./deploy.sh"
+		"build": "sudo bash ./build.sh"
 	},
 	"repository": {
 		"type": "git",
