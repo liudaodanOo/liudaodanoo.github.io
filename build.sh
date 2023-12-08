@@ -61,4 +61,7 @@ git commit -m "build: 📦打包"
 git push origin
 git push -f github
 
+# 返回master分支
+echo -e "\033[31m>>>>> 返回master分支\033[0m"
+
 echo -e "\033[32m操作完成\033[0m"
