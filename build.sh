@@ -11,18 +11,23 @@ dist_path=dist
 # 生成静态文件
 yarn run docs:build
 
+# 删除根目录下的dist
+if [ -d "$dist_path" ]; then
+  rm -rf "$dist_path"
+fi
+
 # 复制图片
 cp  -r "$images_path" "$bundle_path"
 
 # 移动dist
-mv -rf "$bundle_path" "$dist_path"
+mv -f "$bundle_path" "$dist_path"
 chown 777 "$dist_path"
 
 # 切换分支
 git checkout gh-pages
 
 # 将dist目录下的文件移到上一层
-mv -rf "$dist_path"/* .
+mv -f "$dist_path"/* .
 rm  -rf "$dist_path"
 
 # 加至暂存区并提交
