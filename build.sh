@@ -12,7 +12,7 @@ dist_path=dist
 yarn run docs:build
 
 # 复制图片
-cp  -r "$images_path" "$images_cp_path"
+cp  -r "$images_path" "$bundle_path"
 
 # 移动dist
 mv -rf "$bundle_path" "$dist_path"
