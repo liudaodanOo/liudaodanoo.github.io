@@ -13,6 +13,6 @@ git stash pop
 git add .
 git commit -m "build: 📦打包"
 git push origin
-git push github
+git push -f github
 
 cd -
