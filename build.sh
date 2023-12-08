@@ -13,7 +13,7 @@ mv .vitepress/dist dist
 git checkout gh-pages
 
 # 将dist目录下的文件移到上一层
-mv * ..
+mv dist/* .
 
 # 加至暂存区并提交
 git add .
