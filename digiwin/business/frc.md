@@ -68,5 +68,5 @@
 ### 平台相关
 
 - [鼎捷雅典娜开发平台](https://athena-dev-platform-test.digiwincloud.com.cn/)
-- [亿信ABI报表](https://digiwinabi-test.apps.digiwincloud.com.cn/abi/eacl/login.do#navigator:/eanalysemgr/analysedefaultpage.do?eana_isSys=false&rshid=eanalysemgr-analysedefaultpage)
 - [智驱中台知识库](http://172.16.2.230/athena-doc-center/)
+- [亿信ABI报表](https://digiwinabi-test.apps.digiwincloud.com.cn/abi/eacl/login.do#navigator:/eanalysemgr/analysedefaultpage.do?eana_isSys=false&rshid=eanalysemgr-analysedefaultpage)
