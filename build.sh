@@ -4,6 +4,7 @@
 set -e
 
 # 变量
+proj_name=markdown
 images_path=images
 bundle_path=.vitepress/dist
 dist_path=dist
@@ -41,7 +42,10 @@ mv "$dist_path" ../"$dist_path"
 
 # 删除当前目录所有文件
 echo -e "\033[31m>>>>> 删除当前目录所有文件\033[0m"
-rm -rf  *
+cd ..
+rm -rf "$proj_name" 
+mkdir "$proj_name"
+cd "$proj_name"
 
 # 将dist目录下的文件移到当前目录
 echo -e "\033[31m>>>>> 将dist目录下的文件移到当前目录\033[0m"
