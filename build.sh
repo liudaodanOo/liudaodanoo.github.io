@@ -15,13 +15,14 @@ yarn run docs:build
 cp  -r "$images_path" "$images_cp_path"
 
 # 移动dist
-mv -f .vitepress/dist dist
+mv -rf .vitepress/dist dist
 
 # 切换分支
 git checkout gh-pages
 
 # 将dist目录下的文件移到上一层
-mv -f dist/* .
+mv -rf dist/* .
+rm  -rf dist
 
 # 加至暂存区并提交
 git add .
