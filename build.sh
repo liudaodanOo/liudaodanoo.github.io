@@ -25,15 +25,22 @@ mv -f "$bundle_path" "$dist_path"
 # 切换分支
 git checkout gh-pages
 
-# 将.git .gitignore复制到dist
-cp -r .git "$dist_path"
-cp .gitignore "$dist_path"
+# 将.git .gitignore node_modules移动到dist
+mv .git "$dist_path"
+mv .gitignore "$dist_path"
+mv node_modules "$dist_path"
 
-# 删除除了dist之外的文件
-rm -rf --exclude="$dist_path" *
+# 将dist移动到上层目录
+mv "$dist_path" ../"$dist_path"
 
-# 将dist目录下的文件移到上一层
+# 删除当前目录所有文件
+rm -rf  *
+
+# 将dist目录下的文件移到当前目录
+mv ../"$dist_path" "$dist_path"
 mv -f "$dist_path"/* .
+
+# 删除dist目录
 rm  -rf "$dist_path"
 
 # 加至暂存区并提交
