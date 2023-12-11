@@ -69,7 +69,14 @@
 
 3. 部署 [地址](https://ops.digiwincloud.com.cn/login)
 
-   首页 -> 部署中心 -> 流水线部署 -> 选择对应的项目 -> 选择正确的版本部署至PaaS区 -> 部署至 HuaWei 测试区
+   - Web端
 
-   - Web端的项目名：FRCPACKAGE
-   - 移动端的项目名：FRCDIGIWINMOBILE
+     项目名：Web端的项目名：FRCPACKAGE
+
+     首页 -> 部署中心 -> 流水线部署 -> 选择对应的项目 -> 选择正确的版本部署至PaaS区 -> 部署至 HuaWei 测试区
+
+   - 移动端
+
+     项目名：FRCDIGIWINMOBILE
+
+     首页 -> 部署中心 -> 流水线部署 -> 选择对应的项目 -> 选择正确的版本部署至 HuaWei 测试区

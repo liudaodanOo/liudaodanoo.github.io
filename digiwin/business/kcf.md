@@ -52,6 +52,6 @@
 
 3. 部署 [地址](https://ops.digiwincloud.com.cn/login)
 
-   首页 -> 部署中心 -> 流水线部署 -> 选择对应的项目 -> 选择正确的版本部署至PaaS区 -> 部署至 HuaWei 测试区
+   首页 -> 部署中心 -> 流水线部署 -> 选择对应的项目 -> 选择正确的版本部署至 HuaWei 测试区
 
-   - 项目名：KCF
+   - 项目名：KCF-MOBILE
