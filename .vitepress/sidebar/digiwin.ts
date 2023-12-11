@@ -13,6 +13,14 @@ const sideBar: DefaultTheme.Sidebar = {
 					text: '问题快反',
 					link: '/digiwin/business/frc',
 				},
+				{
+					text: 'ChatFile',
+					link: '/digiwin/business/kcf',
+				},
+				{
+					text: '知识中台',
+					link: '/digiwin/business/kmo',
+				},
 			],
 		},
 	],

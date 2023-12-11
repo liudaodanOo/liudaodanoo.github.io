@@ -6,7 +6,7 @@
 
 ### 应用
 
-> PS: 预生产与生产环境地址相同，点击「切换」即可切换至生产环境。
+> PS: 预生产与生产环境地址相同，DevOps平台中点击「切换」即可切换至生产环境。
 
 - [测试区 - HuaWei](https://athena-test.digiwincloud.com.cn/)
 - [测试区 - 微软](https://athena-test.digiwincloud.com/)
@@ -34,18 +34,24 @@
 - [智驱中台知识库](http://172.16.2.230/athena-doc-center/)
 - [亿信ABI报表](https://digiwinabi-test.apps.digiwincloud.com.cn/abi/eacl/login.do#navigator:/eanalysemgr/analysedefaultpage.do?eana_isSys=false&rshid=eanalysemgr-analysedefaultpage)
 
+### 其他
+
+- [迭代时间表](https://docs.qq.com/sheet/DVGpxUGx3UXZNS0NX?u=446de12152de430ca724aa2a897c7b8c&tab=mczbq9)
+
 ## 开发规范
 
 ### Web端
 
 1. Git 分支管理 [地址](#前端代码仓库)
 
-   每次迭代基于上个迭代分支创建新的开发分支，如：
+   a. Web端每次迭代基于上个迭代分支创建新的开发分支，如：
 
    ```
    # 命名规范：feature/[年份]s[迭代]
    feature/2023s14 -> feature/2023s15
    ```
+
+   b. 移动端则在 `master` 分支上开发。
 
 2. 打包 [地址](#ci-cd)
 

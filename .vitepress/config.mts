@@ -20,7 +20,7 @@ export default defineConfig({
 		},
 		nav: [
 			{ text: '个人', link: '/profile/', activeMatch: '/profile' },
-			{ text: '鼎捷', link: '/digiwin/public', activeMatch: '/digiwin' },
+			{ text: '其他', items: [{ text: '鼎捷', link: '/digiwin/public', activeMatch: '/digiwin' }] },
 		],
 		socialLinks: [{ icon: 'github', link: 'https://gitee.com/liudaodanOo/markdown' }],
 		sidebar: {
