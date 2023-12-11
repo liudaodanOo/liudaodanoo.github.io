@@ -26,7 +26,6 @@
 
 - [Web端 - Jenkins](https://athena-devops-jenkins.digiwincloud.com.cn/job/MUI/job/frc/)
 - [移动端 - Jenkins](http://172.16.2.116:22690/job/frcdigiwinmobile/)
-- [移动端 - Jenkins](http://172.16.2.116:22690/job/frcdigiwinmobile/)
 - [部署 - DevOps](https://ops.digiwincloud.com.cn/login)
 
 ### 平台相关
