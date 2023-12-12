@@ -29,7 +29,22 @@ export default defineConfig({
 			copyright: `Copyright © 2023-${new Date().getFullYear()} LiudaodanOo`,
 		},
 		nav: [
-			{ text: '前端', link: '/fronend/', activeMatch: '/fronend' },
+			{
+				text: '前端',
+				activeMatch: '/fronend',
+				items: [
+					{
+						text: 'Vue3.0',
+						items: [
+							{
+								text: 'Vue router',
+								link: '/frontend/vue/3.0/vue-router',
+								activeMatch: '/frontend/vue/3.0/vue-router',
+							},
+						],
+					},
+				],
+			},
 			{ text: '后端', link: '/backend/java/maven/introduction', activeMatch: '/backend' },
 			{ text: '个人', items: [{ text: 'digiwin', link: '/digiwin/public', activeMatch: '/digiwin' }] },
 		],
