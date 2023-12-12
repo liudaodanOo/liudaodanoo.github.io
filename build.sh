@@ -10,8 +10,8 @@ function echoRed() {
 echoRed 'npm run docs:build'
 npm run docs:build
 
-echoRed 'cp  -r images .vitepress/dist'
-cp  -r images .vitepress/dist
+echoRed 'cp  -r images .vitepress/dist/images'
+cp  -r images .vitepress/dist/images
 
 echoRed '.vitepress/dist'
 cd .vitepress/dist
@@ -48,7 +48,7 @@ git push -f github
 
 cd ../../
 
-echoRed 'git push -f github'
-rm -rf .vitepress/dist
+# echoRed 'git push -f github'
+# rm -rf .vitepress/dist
 
 echo -e "\033[32m执行完毕\033[0m"
