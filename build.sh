@@ -2,9 +2,6 @@
 
 echo -e "\033[32m开始执行\033[0m"
 
-# 变量
-dist_path=.vitepress/dist
-
 # 函数
 function echoRed() {
   echo -e "\033[31mexcute>>>>: $1\033[0m"
@@ -13,13 +10,11 @@ function echoRed() {
 echoRed 'npm run docs:build'
 npm run docs:build
 
-if [ -d "$dist_path" ]
-then
-  cd "$dist_path"
-else
-  echoRed "$dist_path'不存在'"
-  exit 0
-fi
+echoRed 'cp  -r images .vitepress/dist'
+cp  -r images .vitepress/dist
+
+echoRed '.vitepress/dist'
+cd .vitepress/dist
 
 echoRed 'git init'
 git init
@@ -52,6 +47,8 @@ echoRed 'git push -f github'
 git push -f github
 
 cd ../../
-rm -rf "$dist_path"
+
+echoRed 'git push -f github'
+rm -rf .vitepress/dist
 
 echo -e "\033[32m执行完毕\033[0m"
