@@ -5,7 +5,6 @@ const sideBar: DefaultTheme.SidebarItem = {
 	items: [
 		{
 			text: '3.0',
-			link: '/frontend/vue/3.0/vue-router',
 			items: [
 				{
 					text: 'Vue router',
