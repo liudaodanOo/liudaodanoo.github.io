@@ -48,7 +48,7 @@ git push -f github
 
 cd ../../
 
-# echoRed 'git push -f github'
-# rm -rf .vitepress/dist
+echoRed 'git push -f github'
+rm -rf .vitepress/dist
 
 echo -e "\033[32m执行完毕\033[0m"
