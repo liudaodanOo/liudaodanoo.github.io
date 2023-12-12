@@ -1,5 +1,7 @@
-import DigiwinSideBar from './digiwin';
+import BackendSidebar from './backend';
+import DigiwinSidebar from './digiwin';
 
 export default {
-	...DigiwinSideBar,
+	...BackendSidebar,
+	...DigiwinSidebar,
 };

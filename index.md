@@ -11,18 +11,24 @@ hero:
     alt: 宇智波鼬
   actions:
     - theme: brand
-      text: 个人
-      link: /profile
+      text: 前端
+      link: /frontend
     - theme: alt
-      text: 其他
+      text: 后端
+      link: /backend/java/maven/introduction
+    - theme: brand
+      text: 个人
       link: /digiwin/public
 
 features:
+  - icon: 🌿
+    title: 前端
+    details: 前端技术相关随笔
+  - icon: 🌲
+    title: 后端
+    details: 后端技术相关随笔
   - icon: 🧑‍💻
     title: 个人
-    details: 技术相关随笔
-  - icon: 💼
-    title: 其他
     details: 生活、工作相关随笔
   - icon: 🛠️
     title: 使用的技术栈

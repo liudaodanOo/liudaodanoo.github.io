@@ -1,13 +1,17 @@
 import { defineConfig } from 'vitepress';
-import SideBars from './sidebar';
+import Sidebars from './sidebar';
+console.log('Sidebars', Sidebars);
 
 // algolia配置
 const search = {
 	provider: 'algolia',
 	options: {
-		appId: 'Y5IBB10LWN', // 你的 Application ID
-		apiKey: 'd8fbbb73bf1966863552a496187f5556', // 你的Search API Key
-		indexName: 'liudaodanooio', // 你的indexName
+		appId: 'Y5IBB10LWN', // Application ID
+		apiKey: 'd8fbbb73bf1966863552a496187f5556', // Search API Key
+		indexName: 'liudaodanooio', // indexName
+		searchParameters: {
+			facetFilters: ['language:zh'],
+		},
 	},
 };
 
@@ -26,15 +30,16 @@ export default defineConfig({
 		logo: '/images/you.jpg',
 		footer: {
 			message: 'Released under the MIT License.',
-			copyright: 'Copyright © 2023-PRESENT liudaodanOo',
+			copyright: `Copyright © 2023-${new Date().getFullYear()} LiudaodanOo`,
 		},
 		nav: [
-			{ text: '个人', link: '/profile/', activeMatch: '/profile' },
-			{ text: '其他', items: [{ text: 'digiwin', link: '/digiwin/public', activeMatch: '/digiwin' }] },
+			{ text: '前端', link: '/fronend/', activeMatch: '/fronend' },
+			{ text: '后端', link: '/backend/java/maven/introduction', activeMatch: '/backend' },
+			{ text: '个人', items: [{ text: 'digiwin', link: '/digiwin/public', activeMatch: '/digiwin' }] },
 		],
 		socialLinks: [{ icon: 'github', link: 'https://gitee.com/liudaodanOo/markdown' }],
 		sidebar: {
-			...SideBars,
+			...Sidebars,
 		},
 		// @ts-ignore
 		search,
