@@ -4,7 +4,7 @@ echo -e "\033[32m开始执行\033[0m"
 
 # 函数
 function echoRed() {
-  echo -e "\033[31mexcute>>>>: $1\033[0m"
+  echo -e "\033[31mexecute>>>>: $1\033[0m"
 }
 
 echoRed 'npm run docs:build'
