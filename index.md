@@ -3,8 +3,8 @@
 layout: home
 
 hero:
-  name: '🍭🐳刘捣蛋的随笔'
-  text: '基于 VitePress + Git Pages 的随笔博客'
+  name: '🍭🐳咸鱼'
+  text: '基于 VitePress + Github Pages'
   tagline: 用于整理碎片知识
   image:
     src: /images/you.jpg
@@ -14,17 +14,17 @@ hero:
       text: 个人
       link: /profile
     - theme: alt
-      text: 鼎捷
+      text: 其他
       link: /digiwin/public
 
 features:
   - icon: 🧑‍💻
     title: 个人
-    details: 个人相关随笔
+    details: 技术相关随笔
   - icon: 💼
-    title: 鼎捷
-    details: 记录一些 digiwin 的网址、流程
+    title: 其他
+    details: 生活、工作相关随笔
   - icon: 🛠️
     title: 使用的技术栈
-    details: VitePress + Git Pages
+    details: VitePress + Github Pages
 ---

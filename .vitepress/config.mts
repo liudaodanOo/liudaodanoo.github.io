@@ -19,8 +19,8 @@ export default defineConfig({
 			{ rel: 'icon', href: '/images/you.jpg' },
 		],
 	],
-	title: '🍭🐳刘捣蛋的随笔',
-	description: '基于 vitepress + giteeio 的随笔博客',
+	title: '🍭🐳咸鱼',
+	description: '基于 VitePress + Github Pages',
 	themeConfig: {
 		// https://vitepress.dev/reference/default-theme-config
 		logo: '/images/you.jpg',
@@ -30,7 +30,7 @@ export default defineConfig({
 		},
 		nav: [
 			{ text: '个人', link: '/profile/', activeMatch: '/profile' },
-			{ text: '其他', items: [{ text: '鼎捷', link: '/digiwin/public', activeMatch: '/digiwin' }] },
+			{ text: '其他', items: [{ text: 'digiwin', link: '/digiwin/public', activeMatch: '/digiwin' }] },
 		],
 		socialLinks: [{ icon: 'github', link: 'https://gitee.com/liudaodanOo/markdown' }],
 		sidebar: {
