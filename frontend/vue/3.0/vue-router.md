@@ -4,9 +4,9 @@
 
 ## 初始化阶段
 
-1. 根据配置创建、返回带有install函数的router对象
-2. 执行install函数，注册RouterView组件，将表示当前路由的响应式对象提供给后代组件
-3. 在RouterView组件中注入currentRouter，观察currentRouter的变化
+1. 根据配置创建、返回带有 install 函数的 router 对象
+2. 执行 install 函数，注册 RouterView 组件，将表示当前路由的响应式对象提供给后代组件
+3. 在 RouterView 组件中注入 currentRouter ，观察 currentRouter 的变化
 
 ## 路由切换阶段
 
