@@ -8,9 +8,6 @@ const search = {
 		appId: 'Y5IBB10LWN', // Application ID
 		apiKey: 'd8fbbb73bf1966863552a496187f5556', // Search API Key
 		indexName: 'liudaodanooio', // indexName
-		searchParameters: {
-			facetFilters: ['language:zh'],
-		},
 	},
 };
 
