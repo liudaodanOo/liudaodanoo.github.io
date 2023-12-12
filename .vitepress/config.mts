@@ -1,6 +1,5 @@
 import { defineConfig } from 'vitepress';
 import Sidebars from './sidebar';
-console.log('Sidebars', Sidebars);
 
 // algolia配置
 const search = {
