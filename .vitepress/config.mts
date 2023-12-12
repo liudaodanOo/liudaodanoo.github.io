@@ -1,6 +1,16 @@
 import { defineConfig } from 'vitepress';
 import SideBars from './sidebar';
 
+// algolia配置
+const search = {
+	provider: 'algolia',
+	options: {
+		appId: 'Y5IBB10LWN', // 你的 Application ID
+		apiKey: 'd8fbbb73bf1966863552a496187f5556', // 你的Search API Key
+		indexName: 'liudaodanooio', // 你的indexName
+	},
+};
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
 	head: [
@@ -26,5 +36,7 @@ export default defineConfig({
 		sidebar: {
 			...SideBars,
 		},
+		// @ts-ignore
+		search,
 	},
 });

@@ -34,6 +34,7 @@
 
 ### 其他
 
+- [禅道](https://essc-devops-zentao.digiwincloud.com.cn/my/)
 - [迭代时间表](https://docs.qq.com/sheet/DVGpxUGx3UXZNS0NX?u=446de12152de430ca724aa2a897c7b8c&tab=mczbq9)
 
 ## 开发规范

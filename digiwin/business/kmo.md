@@ -31,6 +31,7 @@
 
 ### 其他
 
+- [禅道](https://essc-devops-zentao.digiwincloud.com.cn/my/)
 - [迭代时间表](https://docs.qq.com/sheet/DR1VWdnBRUHNNZ3RB?tab=ggerp4)
 - [接口文档](https://apifox.com/apidoc/shared-5e5f4947-ee70-4cb3-94a2-43d7a4426328)
 - [高保真 - figma](https://www.figma.com/file/Jw077EKzSZDNBLZ4OIMQWV/%E7%9F%A5%E8%AF%86%E5%BA%93-lison?node-id=2825%3A26914&mode=dev)
