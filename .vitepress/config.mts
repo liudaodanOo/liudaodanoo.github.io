@@ -1,5 +1,5 @@
 import { defineConfig } from 'vitepress';
-import Sidebars from './sidebar';
+import sidebar from './sidebar';
 
 // algolia配置
 const search = {
@@ -50,13 +50,12 @@ export default defineConfig({
 					},
 				],
 			},
-			{ text: '后端', link: '/backend/java/maven/introduction', activeMatch: '/backend' },
+			// @TODO: 后端笔记
+			// { text: '后端', link: '/backend/java/maven/introduction', activeMatch: '/backend' },
 			{ text: '个人', items: [{ text: 'digiwin', link: '/digiwin/public', activeMatch: '/digiwin' }] },
 		],
 		socialLinks: [{ icon: 'github', link: 'https://gitee.com/liudaodanOo/markdown' }],
-		sidebar: {
-			...Sidebars,
-		},
+		sidebar,
 		// @ts-ignore
 		search,
 	},
