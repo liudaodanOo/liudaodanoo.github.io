@@ -26,7 +26,7 @@ export default defineConfig({
 		logo: '/images/you.jpg',
 		footer: {
 			message: 'Released under the MIT License.',
-			copyright: `Copyright © 2023-${new Date().getFullYear()} LiudaodanOo`,
+			copyright: `Copyright © 2023-${new Date().getFullYear()} liudaodanOo`,
 		},
 		nav: [
 			{
@@ -54,7 +54,8 @@ export default defineConfig({
 			// { text: '后端', link: '/backend/java/maven/introduction', activeMatch: '/backend' },
 			{ text: '个人', items: [{ text: 'digiwin', link: '/digiwin/public', activeMatch: '/digiwin' }] },
 		],
-		socialLinks: [{ icon: 'github', link: 'https://gitee.com/liudaodanOo/markdown' }],
+		// @TODO: gitee链接
+		// socialLinks: [{ icon: 'github', link: 'https://gitee.com/liudaodanOo/liudaodanOo' }],
 		sidebar,
 		// @ts-ignore
 		search,
