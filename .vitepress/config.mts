@@ -34,22 +34,17 @@ export default defineConfig({
 				activeMatch: '/fronend',
 				items: [
 					{
-						text: 'Vue3.0',
+						text: 'Vue',
 						items: [
 							{
-								text: 'Vue router',
+								text: '3.0',
 								link: '/frontend/vue/3.0/vue-router',
 								activeMatch: '/frontend/vue/3.0/vue-router',
 							},
-						],
-					},
-					{
-						text: 'Vue2.0',
-						items: [
 							{
-								text: '响应式原理',
+								text: '2.0',
 								link: '/frontend/vue/2.0/responsive',
-								activeMatch: '/frontend/vue/2.0/responsive',
+								activeMatch: '/frontend/vue/2.0',
 							},
 						],
 					},
