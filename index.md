@@ -12,7 +12,7 @@ hero:
   actions:
     - theme: brand
       text: 前端
-      link: /frontend
+      link: /frontend/vue/2.x.x/responsive
     # @TODO: 后端笔记
     # - theme: alt
     #   text: 后端

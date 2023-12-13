@@ -37,16 +37,16 @@ export default defineConfig({
 						text: 'Vue',
 						items: [
 							{
-								text: '3.0',
-								link: '/frontend/vue/3.0/vue-router',
-								activeMatch: '/frontend/vue/3.0/vue-router',
-							},
-							{
-								text: '2.0',
-								link: '/frontend/vue/2.0/responsive',
-								activeMatch: '/frontend/vue/2.0',
+								text: '2.x.x',
+								link: '/frontend/vue/2.x.x/responsive',
+								activeMatch: '/frontend/vue/2.x.x',
 							},
 						],
+					},
+					{
+						text: 'Vue router',
+						link: '/frontend/vue-router/4.x.x/vue-router',
+						activeMatch: '/frontend/vue-router/4.x.x/vue-router',
 					},
 				],
 			},
