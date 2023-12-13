@@ -43,6 +43,16 @@ export default defineConfig({
 							},
 						],
 					},
+					{
+						text: 'Vue2.0',
+						items: [
+							{
+								text: '响应式原理',
+								link: '/frontend/vue/2.0/responsive',
+								activeMatch: '/frontend/vue/2.0/responsive',
+							},
+						],
+					},
 				],
 			},
 			{ text: '后端', link: '/backend/java/maven/introduction', activeMatch: '/backend' },

@@ -12,6 +12,15 @@ const sideBar: DefaultTheme.SidebarItem = {
 				},
 			],
 		},
+		{
+			text: '2.0',
+			items: [
+				{
+					text: '响应式原理',
+					link: '/frontend/vue/2.0/responsive',
+				},
+			],
+		},
 	],
 };
 
