@@ -28,6 +28,9 @@
 
 ### 其他
 
+- [禅道](https://essc-devops-zentao.digiwincloud.com.cn/my/)
+- [专项计划表](https://docs.qq.com/sheet/DR0ZISW9ZcFFHellI?tab=jg43me)
+
 暂无。
 
 ## 开发规范
