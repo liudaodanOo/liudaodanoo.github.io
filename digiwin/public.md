@@ -38,7 +38,7 @@
 <h2>公共</h2>
 <ul>
   <li v-for="(item) of fileList" :key="item.link">
-    <a :hren="item.link">{{item.name}}</a>
+    <a :href="item.link">{{item.name}}</a>
   </li>
 </ul>
 
