@@ -37,7 +37,7 @@
 <h1>资源</h1>
 <h2>公共</h2>
 <ul>
-  <li v-for="(item) of fileList" :key="item.link">
+  <li v-for="(item) of publicList" :key="item.link">
     <a :href="item.link">{{item.name}}</a>
   </li>
 </ul>
