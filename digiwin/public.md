@@ -1,13 +1,3 @@
-# 资源
-
-## 公共
-
-- [公司邮箱](https://dwm8.digiwin.com/coremail/)
-- [EasyFlow GP](http://efgpcn.digiwin.com/NaNaWeb/GP//ForwardIndex?hdnMethod=findIndexForward)
-- [部门分享人员清单](https://docs.qq.com/sheet/DVG9ZZkZpbFdaWWVT?tab=BB08J2)
-
-## 规范文档
-
 <script setup>
   const baseURL = location.origin;
   const fileList = [
@@ -28,6 +18,16 @@
     window.open(link);
   }
 </script>
+
+# 资源
+
+## 公共
+
+- [公司邮箱](https://dwm8.digiwin.com/coremail/)
+- [EasyFlow GP](http://efgpcn.digiwin.com/NaNaWeb/GP//ForwardIndex?hdnMethod=findIndexForward)
+- [部门分享人员清单](https://docs.qq.com/sheet/DVG9ZZkZpbFdaWWVT?tab=BB08J2)
+
+## 规范文档
 
 <ul>
   <li v-for="(item) of fileList" :key="item.link">
