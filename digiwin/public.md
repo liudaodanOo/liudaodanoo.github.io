@@ -1,4 +1,19 @@
 <script setup>
+  const publicList = [
+    {
+      name: '公司邮箱',
+      link: 'https://dwm8.digiwin.com/coremail/'
+    },
+    {
+      name: 'EasyFlow GP',
+      link: 'http://efgpcn.digiwin.com/NaNaWeb/GP//ForwardIndex?hdnMethod=findIndexForward'
+    },
+    {
+      name: '部门分享人员清单',
+      link: 'https://docs.qq.com/sheet/DVG9ZZkZpbFdaWWVT?tab=BB08J2'
+    }
+  ];
+
   const baseURL = location.origin;
   const fileList = [
     {
@@ -19,16 +34,15 @@
   }
 </script>
 
-# 资源
+<h1>资源</h1>
+<h2>公共</h2>
+<ul>
+  <li v-for="(item) of fileList" :key="item.link">
+    <a :hren="item.link">{{item.name}}</a>
+  </li>
+</ul>
 
-## 公共
-
-- [公司邮箱](https://dwm8.digiwin.com/coremail/)
-- [EasyFlow GP](http://efgpcn.digiwin.com/NaNaWeb/GP//ForwardIndex?hdnMethod=findIndexForward)
-- [部门分享人员清单](https://docs.qq.com/sheet/DVG9ZZkZpbFdaWWVT?tab=BB08J2)
-
-## 规范文档
-
+<h2>规范文档</h2>
 <ul>
   <li v-for="(item) of fileList" :key="item.link">
     <a @click="onClick(item.link)">{{item.name}}</a>
