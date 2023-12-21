@@ -29,7 +29,7 @@
       link: baseURL + '/docs/digiwin/数据库设计规范.pdf'
     }
   ];
-  
+
   const onClick = (link) => {
     window.open(link);
   }
@@ -39,7 +39,7 @@
 <h2>公共</h2>
 <ul>
   <li v-for="(item) of publicList" :key="item.link">
-    <a :href="item.link" @click="onClick(item.link)">{{item.name}}</a>
+    <a @click="onClick(item.link)">{{item.name}}</a>
   </li>
 </ul>
 
