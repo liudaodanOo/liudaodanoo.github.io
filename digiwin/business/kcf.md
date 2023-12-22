@@ -19,8 +19,11 @@
 
 > PS: 打包/部署前，请与 SM @陈雪英 确认账号权限
 
-- [KCF - Jenkins](http://172.16.2.116:22690/job/kcf-mobile/)
+`develop` 分支有提交时，自动在 `GitTea` 上进行打包。
+
+- [KCF - GitTea](http://172.16.101.224:22690/chatFile/kcf_frontend_mobile/)
 - [部署 - DevOps](https://ops.digiwincloud.com.cn/login)
+- <span style="text-decoration: red line-through;">[KCF - Jenkins（废弃）](http://172.16.2.116:22690/job/kcf-mobile/)</span>
 
 ### 平台相关
 
