@@ -52,7 +52,13 @@ export default defineConfig({
 			},
 			// @TODO: 后端笔记
 			// { text: '后端', link: '/backend/java/maven/introduction', activeMatch: '/backend' },
-			{ text: '个人', items: [{ text: 'digiwin', link: '/digiwin/public', activeMatch: '/digiwin' }] },
+			{
+				text: '个人',
+				items: [
+					{ text: 'digiwin', link: '/digiwin/public', activeMatch: '/digiwin' },
+					{ text: 'pdd', link: '/pdd/index', activeMatch: '/pdd' },
+				],
+			},
 		],
 		// @TODO: gitee链接
 		// socialLinks: [{ icon: 'github', link: 'https://gitee.com/liudaodanOo/liudaodanOo' }],
