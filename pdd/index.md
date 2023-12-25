@@ -1,9 +1,5 @@
-<script setup>
-import { ref } from 'vue';
+# 专有名词
 
-const videoRef = ref(void 0);
-
-console.log('videoRef', videoRef);
-</script>
-
-<video ref="videoRef" src="/docs/pdd/jiaocheng.mp4" controls autoplay></video>
+| 名词 | 解释                               |
+| ---- | ---------------------------------- |
+| SKU  | Stock Keeping Unit. 库存保有单位。 |

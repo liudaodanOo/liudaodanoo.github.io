@@ -56,7 +56,7 @@ export default defineConfig({
 				text: '个人',
 				items: [
 					{ text: 'digiwin', link: '/digiwin/public', activeMatch: '/digiwin' },
-					{ text: 'pdd', link: '/pdd/index', activeMatch: '/pdd' },
+					// { text: 'pdd', link: '/pdd/index', activeMatch: '/pdd' },
 				],
 			},
 		],
