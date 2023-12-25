@@ -38,14 +38,14 @@
 <h1>资源</h1>
 <h2>公共</h2>
 <ul>
-  <li v-for="(item) of publicList" :key="item.link">
+  <li v-for="(item) of publicList" :key="item.link" :data-href="item.link">
     <a @click="onClick(item.link)">{{item.name}}</a>
   </li>
 </ul>
 
 <h2>规范文档</h2>
 <ul>
-  <li v-for="(item) of fileList" :key="item.link">
+  <li v-for="(item) of fileList" :key="item.link" :data-href="item.link">
     <a @click="onClick(item.link)">{{item.name}}</a>
   </li>
 </ul>
