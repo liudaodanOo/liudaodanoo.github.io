@@ -16,7 +16,7 @@ cp  -r images .vitepress/dist/images
 echoRed 'cp  -r docs .vitepress/dist/docs'
 cp  -r docs .vitepress/dist/docs
 
-echoRed '.vitepress/dist'
+echoRed 'cd .vitepress/dist'
 cd .vitepress/dist
 
 echoRed 'git init'
