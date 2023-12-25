@@ -13,6 +13,9 @@ npm run docs:build
 echoRed 'cp  -r images .vitepress/dist/images'
 cp  -r images .vitepress/dist/images
 
+echoRed 'cp  -r docs .vitepress/dist/docs'
+cp  -r docs .vitepress/dist/docs
+
 echoRed '.vitepress/dist'
 cd .vitepress/dist
 
