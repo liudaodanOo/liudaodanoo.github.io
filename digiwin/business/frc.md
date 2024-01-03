@@ -16,15 +16,15 @@
 > PS: 本地 clone 仓库前，请与 SM @高雅 确认仓库权限。
 
 - [Web端 - GitLab](http://47.102.222.172:22691/app/FRC)
-- [移动端 - GitBlit](http://172.16.2.111:8089/summary/FRC%2Ffrcdigiwinmobile.git)
+- [移动端 - GitTea](http://172.16.101.224:22691/frc/FRCDigiWinMobile)
 
 ### CI/CD
 
-> PS: 打包/部署前，请与 SM @高雅 确认账号权限
+> PS: 打包前，请与 SM @高雅 确认账号权限
 
 - [Web端 - Jenkins](https://athena-devops-jenkins.digiwincloud.com.cn/job/MUI/job/frc/)
 - [移动端 - Jenkins](http://172.16.2.116:22690/job/frcdigiwinmobile/)
-- [部署 - DevOps](https://ops.digiwincloud.com.cn/login)
+- <span style="text-decoration: red line-through;">[部署 - DevOps]（废弃）[部署 - DevOps](https://ops.digiwincloud.com.cn/login)</span>
 
 ### 平台相关
 
