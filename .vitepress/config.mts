@@ -34,30 +34,41 @@ export default defineConfig({
 				activeMatch: '/fronend',
 				items: [
 					{
-						text: 'Vue',
+						text: '框架 & 工具',
 						items: [
 							{
-								text: '2.x.x',
+								text: 'Vue',
 								link: '/frontend/vue/2.x.x/responsive',
-								activeMatch: '/frontend/vue/2.x.x',
+								activeMatch: '/frontend/vue',
+							},
+							{
+								text: 'Vue router',
+								link: '/frontend/vue-router/4.x.x',
+								activeMatch: '/frontend/vue-router',
 							},
 						],
 					},
+				],
+			},
+			{
+				text: '后端',
+				activeMatch: '/backend',
+				items: [
 					{
-						text: 'Vue router',
-						link: '/frontend/vue-router/4.x.x/vue-router',
-						activeMatch: '/frontend/vue-router/4.x.x/vue-router',
+						text: '框架 & 工具',
+						items: [
+							{
+								text: 'Maven',
+								link: '/backend/maven/install',
+								activeMatch: '/backend/maven',
+							},
+						],
 					},
 				],
 			},
-			// @TODO: 后端笔记
-			// { text: '后端', link: '/backend/java/maven/introduction', activeMatch: '/backend' },
 			{
 				text: '个人',
-				items: [
-					{ text: 'digiwin', link: '/digiwin/public', activeMatch: '/digiwin' },
-					// { text: 'pdd', link: '/pdd/index', activeMatch: '/pdd' },
-				],
+				items: [{ text: 'digiwin', link: '/digiwin/public', activeMatch: '/digiwin' }],
 			},
 		],
 		// @TODO: gitee链接
