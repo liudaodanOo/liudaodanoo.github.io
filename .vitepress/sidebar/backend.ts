@@ -24,6 +24,32 @@ const sideBar: DefaultTheme.Sidebar = {
 			],
 		},
 	],
+	'/backend/spring': [
+		{
+			text: 'Spring',
+			base: '/backend/spring',
+			items: [
+				{
+					text: 'Spring Framework',
+					link: '/framework',
+				},
+				{
+					text: 'Spring IOC',
+					collapsed: true,
+					items: [
+						{
+							text: '容器和核心概念',
+							link: '/ioc-concept',
+						},
+						{
+							text: '实践和应用',
+							link: '/ioc-practice',
+						},
+					],
+				},
+			],
+		},
+	],
 };
 
 export default sideBar;

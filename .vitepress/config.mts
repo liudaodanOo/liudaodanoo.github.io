@@ -62,6 +62,11 @@ export default defineConfig({
 								link: '/backend/maven/install',
 								activeMatch: '/backend/maven',
 							},
+							{
+								text: 'Spring',
+								link: '/backend/spring/framework',
+								activeMatch: '/backend/spring',
+							},
 						],
 					},
 				],

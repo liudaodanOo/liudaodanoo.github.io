@@ -5,6 +5,7 @@
 ### 继承的概念
 
 `Maven` 继承是指在 `Maven` 的项目中，让子模块从父模块中继承配置信息的机制。
+
 ![image.jpg](/images/maven/inherit.jpg)
 
 ### 继承的作用
