@@ -4,8 +4,8 @@ layout: home
 
 hero:
   name: '🍭🐳咸鱼'
-  text: '基于 VitePress + Github Pages'
-  tagline: 用于整理碎片知识
+  text: 'Keep, Cherish, Regard...'
+  tagline: 越努力越幸运
   image:
     src: /images/you.jpg
     alt: 宇智波鼬
