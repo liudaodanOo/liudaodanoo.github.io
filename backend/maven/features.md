@@ -20,7 +20,7 @@
 父工程用于管理子工程，所以 `packaging` 必须为<span hl-txt-1>pom</span>。
 
 ```xml
-<groupId>com.atguigu.maven</groupId>
+<groupId>com.oo.maven</groupId>
 <artifactId>pro03-maven-parent</artifactId>
 <version>1.0-SNAPSHOT</version>
 <!-- 当前工程作为父工程，用于管理子工程，所以打包方式必须是 pom -->
@@ -35,14 +35,14 @@
 <!-- 使用parent标签指定当前工程的父工程 -->
 <parent>
   <!-- 父工程的信息 -->
-  <groupId>com.atguigu.maven</groupId>
+  <groupId>com.oo.maven</groupId>
   <artifactId>pro03-maven-parent</artifactId>
   <version>1.0-SNAPSHOT</version>
 </parent>
 
 <!-- 子工程的信息 -->
 <!-- 如果子工程信息中的groupId和version与父工程一致，那么可以省略 -->
-<groupId>com.atguigu.maven</groupId>
+<groupId>com.oo.maven</groupId>
 <artifactId>pro04-maven-module</artifactId>
 <version>1.0-SNAPSHOT</version>
 ```
