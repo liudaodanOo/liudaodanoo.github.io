@@ -1,4 +1,6 @@
 <script setup>
+  import { ref } from 'vue';
+
   const publicList = [
     {
       name: '公司邮箱',
