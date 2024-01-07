@@ -14,21 +14,24 @@
     }
   ];
 
-  const baseURL = location?.origin;
-  const fileList = [
-    {
-      name: '前端开发规范',
-      link: baseURL + '/docs/digiwin/前端开发规范.docx'
-    },
-    {
-      name: '后端开发规范',
-      link: baseURL + '/docs/digiwin/后端开发规范.docx'
-    },
-    {
-      name: '数据库设计规范',
-      link: baseURL + '/docs/digiwin/数据库设计规范.pdf'
-    }
-  ];
+  const fileList = ref([]);
+  onMounted(() => {
+    const baseURL = location?.origin;
+    fileList.value = [
+      {
+        name: '前端开发规范',
+        link: baseURL + '/docs/digiwin/前端开发规范.docx'
+      },
+      {
+        name: '后端开发规范',
+        link: baseURL + '/docs/digiwin/后端开发规范.docx'
+      },
+      {
+        name: '数据库设计规范',
+        link: baseURL + '/docs/digiwin/数据库设计规范.pdf'
+      }
+    ];
+  })
 
   const onClick = (link) => {
     window.open(link);
