@@ -176,12 +176,12 @@ img[src='/images/you.jpg'] {
 }
 
 /* 文本高亮 */
-.hl-txt-1 {
+*[hl-txt-1] {
 	color: var(--vp-c-indigo-1);
 }
 
 /* 背景高亮 */
-.hl-bg-1 {
+*[hl-bg-1] {
 	background: var(--vp-c-indigo-2);
 	color: #fff;
 }
