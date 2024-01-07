@@ -14,7 +14,7 @@
     }
   ];
 
-  const baseURL = location.origin;
+  const baseURL = location?.origin;
   const fileList = [
     {
       name: '前端开发规范',
