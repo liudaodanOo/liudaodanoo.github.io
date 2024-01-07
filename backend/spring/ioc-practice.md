@@ -18,7 +18,7 @@
 
 `ApplicationContext` 是一个高级工厂的接口，能够维护不同 `Bean` 及其依赖项的注册表。通过使用方法 `T getBean(String name, Class<T> requiredType)` 可以检索 `Bean的实例` 。
 
-## XML配置方式
+## XML方式
 
 ### Bean信息声明配置（IOC）
 
@@ -246,7 +246,7 @@ public class UserService {
 </beans>
 ```
 
-## 注解配置方式
+## 注解方式
 
 1. 导入SpringIOC相关依赖
 2. 准备组件类，并添加注解
@@ -396,6 +396,41 @@ import org.springframework.context.annotation.PropertySource;
 // 使用注解读取外部配置，替代 <context:property-placeholder标签
 @PropertySource("classpath:application.properties")
 // 使用@ComponentScan注解,可以配置扫描包,替代<context:component-scan标签
-@ComponentScan(basePackages = {"com.atguigu.components"})
+@ComponentScan(basePackages = {"com.oo.components"})
 public class MyConfiguration {}
 ```
+
+2. 使用 `@Bean注解` 将一个普通类标记为 `Spring组件`
+
+```java
+// 标注当前类是配置类，替代application.xml
+@Configuration
+// 引入jdbc.properties文件
+@PropertySource({"classpath:application.properties","classpath:jdbc.properties"})
+@ComponentScan(basePackages = {"com.oo.components"})
+public class MyConfiguration {
+
+    //如果第三方类进行IoC管理,无法直接使用@Component相关注解
+    //解决方案: xml方式可以使用<bean标签
+    //解决方案: 配置类方式,可以使用方法返回值+@Bean注解
+    @Bean
+    public DataSource createDataSource(@Value("${jdbc.user}") String username,
+                                       @Value("${jdbc.password}")String password,
+                                       @Value("${jdbc.url}")String url,
+                                       @Value("${jdbc.driver}")String driverClassName){
+        //使用Java代码实例化
+        DruidDataSource dataSource = new DruidDataSource();
+        dataSource.setUsername(username);
+        dataSource.setPassword(password);
+        dataSource.setUrl(url);
+        dataSource.setDriverClassName(driverClassName);
+        //返回结果即可
+        return dataSource;
+    }
+}
+```
+
+`@Bean注解` 的用法：
+
+- 指定Bean的别名：@Bean("alias")
+- 指定初始化和销毁方法：@Bean(initMethod="init", destroyMethod="cleanup")
