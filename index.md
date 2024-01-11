@@ -18,7 +18,7 @@ hero:
       link: /backend/index
     - theme: brand
       text: 个人
-      link: /digiwin/public
+      link: /
 
 features:
   - icon: 🌿

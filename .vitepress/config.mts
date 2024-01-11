@@ -73,7 +73,7 @@ export default defineConfig({
 			},
 			{
 				text: '个人',
-				items: [{ text: 'digiwin', link: '/digiwin/public', activeMatch: '/digiwin' }],
+				items: [{ text: '首页', link: '/' }],
 			},
 		],
 		// @TODO: gitee链接

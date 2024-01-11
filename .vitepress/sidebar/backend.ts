@@ -30,11 +30,11 @@ const sideBar: DefaultTheme.Sidebar = {
 			base: '/backend/spring',
 			items: [
 				{
-					text: 'Spring Framework',
+					text: 'Framework',
 					link: '/framework',
 				},
 				{
-					text: 'Spring IOC',
+					text: 'IOC',
 					collapsed: true,
 					items: [
 						{
@@ -46,6 +46,10 @@ const sideBar: DefaultTheme.Sidebar = {
 							link: '/ioc-practice',
 						},
 					],
+				},
+				{
+					text: 'AOP',
+					link: '/aop',
 				},
 			],
 		},
