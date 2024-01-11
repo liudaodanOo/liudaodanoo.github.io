@@ -1,0 +1,1 @@
+import{_ as a,o as e,c as t,R as n}from"./chunks/framework.-3WOX_e2.js";const f=JSON.parse('{"title":"后端","description":"","frontmatter":{},"headers":[],"relativePath":"backend/index.md","filePath":"backend/index.md"}'),r={name:"backend/index.md"},i=n("",3),o=[i];function c(d,l,s,_,h,m){return e(),t("div",null,o)}const u=a(r,[["render",c]]);export{f as __pageData,u as default};
