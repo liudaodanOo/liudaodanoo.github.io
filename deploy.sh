@@ -7,14 +7,14 @@ function echoRed() {
   echo -e "\033[31mexecute>>>>: $1\033[0m"
 }
 
-echoRed 'npm run docs:build'
-npm run docs:build
+echoRed 'npm run build'
+npm run build
 
-echoRed 'cp  -r images .vitepress/dist/images'
-cp  -r images .vitepress/dist/images
+echoRed 'cp -r images .vitepress/dist/images'
+cp -r images .vitepress/dist/images
 
-echoRed 'cp  -r docs .vitepress/dist/docs'
-cp  -r docs .vitepress/dist/docs
+echoRed 'cp -r docs .vitepress/dist/docs'
+cp -r docs .vitepress/dist/docs
 
 echoRed 'cd .vitepress/dist'
 cd .vitepress/dist
@@ -46,12 +46,15 @@ git branch --set-upstream-to=origin/gh-pages gh-pages
 echoRed 'git push -f'
 git push -f
 
-echoRed 'git push -f github'
-git push -f github
+# echoRed 'git push -f github'
+# git push -f github
 
 cd ../../
 
-echoRed 'git push -f github'
+echoRed 'rm -rf .vitepress/dist'
 rm -rf .vitepress/dist
+
+echoRed 'git checkout master'
+git checkout master
 
 echo -e "\033[32m执行完毕\033[0m"

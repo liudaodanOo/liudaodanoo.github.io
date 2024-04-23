@@ -19,7 +19,7 @@ export default defineConfig({
 			{ rel: 'icon', href: '/images/favicon.ico' },
 		],
 	],
-	title: '🍭🐳咸鱼',
+	title: '🍭🐳刘捣蛋',
 	description: '基于 VitePress + Github Pages',
 	themeConfig: {
 		// https://vitepress.dev/reference/default-theme-config
@@ -66,10 +66,10 @@ export default defineConfig({
 					},
 				],
 			},
-			{
-				text: '个人',
-				items: [{ text: '首页', link: '/' }],
-			},
+			// {
+			// 	text: '个人',
+			// 	items: [{ text: '首页', link: '/' }],
+			// },
 		],
 		// @TODO: gitee链接
 		// socialLinks: [{ icon: 'github', link: 'https://gitee.com/liudaodanOo/liudaodanOo' }],
