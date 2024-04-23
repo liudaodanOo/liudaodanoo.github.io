@@ -8,4 +8,4 @@
 ## 杂记
 
 - [面试](/frontend/interview/javascript)
-- [问题](/frontend/problem/index)
+- [问题](/frontend/problems/index)
