@@ -34,19 +34,19 @@ export default defineConfig({
 				activeMatch: '/fronend',
 				items: [
 					{
-						text: '框架 & 工具',
-						items: [
-							{
-								text: 'Vue',
-								link: '/frontend/vue/2.x.x/responsive',
-								activeMatch: '/frontend/vue',
-							},
-							{
-								text: 'Vue router',
-								link: '/frontend/vue-router/4.x.x',
-								activeMatch: '/frontend/vue-router',
-							},
-						],
+						text: 'Vue',
+						link: '/frontend/vue/2.x.x/responsive',
+						activeMatch: '/frontend/vue',
+					},
+					{
+						text: '面试题',
+						link: '/frontend/interview/javascript',
+						activeMatch: '/frontend/interview',
+					},
+					{
+						text: '问题',
+						link: '/frontend/problems/index.md',
+						activeMatch: '/frontend/problems',
 					},
 				],
 			},
@@ -55,19 +55,14 @@ export default defineConfig({
 				activeMatch: '/backend',
 				items: [
 					{
-						text: '框架 & 工具',
-						items: [
-							{
-								text: 'Maven',
-								link: '/backend/maven/install',
-								activeMatch: '/backend/maven',
-							},
-							{
-								text: 'Spring',
-								link: '/backend/spring/framework',
-								activeMatch: '/backend/spring',
-							},
-						],
+						text: 'Maven',
+						link: '/backend/maven/install',
+						activeMatch: '/backend/maven',
+					},
+					{
+						text: 'Spring',
+						link: '/backend/spring/framework',
+						activeMatch: '/backend/spring',
 					},
 				],
 			},

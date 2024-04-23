@@ -1,0 +1,18 @@
+# 遇到的一些问题 & 解决方法
+
+## 浏览器
+
+### window.open为什么会复制sessionStorage？
+
+根据 `HTML规范`:
+
+- window.open会将<span hl-txt-1>原文档(sourceDocument)</span>作为新打开窗口的全局对象的<span hl-txt-1>关联文档</span>。[#dom-open-dev](https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-open-dev)
+- 获取sessionStorage时，如果<span hl-txt-1>关联文档</span>的sessionStorage不为空，则复制一份关联文档的sessionStorage并返回。[#dom-sessionstorage-dev](https://html.spec.whatwg.org/multipage/webstorage.html#dom-sessionstorage-dev)
+
+> Q: 想要打开新窗口时不复制sessionStorage该如何做？
+
+> A: 使用`a标签`跳转即可：
+
+```HTML
+<a href="example.com" target="_blank">Example</a>
+```
