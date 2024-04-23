@@ -27,7 +27,7 @@ ele.onclick = function (event) {
 <span hl-bg-1>参考链接：</span>
 
 - [W3C #event-flow](https://www.w3.org/TR/DOM-Level-3-Events/#event-flow)
-- [MDN #event.cancelBubble（废弃）](https://developer.mozilla.org/zh-CN/docs/Web/API/Event/cancelBubble)
+- [MDN #event.cancelBubble](https://developer.mozilla.org/zh-CN/docs/Web/API/Event/cancelBubble)
 - [MDN #event.stopPropagation](https://developer.mozilla.org/zh-CN/docs/Web/API/Event/stopPropagation)
 - [MDN #event.addEventListener()](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener)
 
