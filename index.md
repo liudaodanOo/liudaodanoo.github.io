@@ -31,6 +31,6 @@ features:
   #   title: 个人
   #   details: 生活、工作相关随笔
   - icon: 🛠️
-    title: 使用的技术栈
-    details: VitePress + Github Pages
+    title: 技术栈
+    details: HTML + CSS + Javascript + Vue +  VitePress
 ---
