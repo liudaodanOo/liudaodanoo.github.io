@@ -25,8 +25,8 @@ git init
 echoRed 'git remote add origin git@gitee.com:liudaodanOo/markdown.git'
 git remote add origin git@gitee.com:liudaodanOo/markdown.git
 
-# echoRed 'git remote add github git@github.com:liudaodanOo/liudaodanoo.github.io.git'
-# git remote add github git@github.com:liudaodanOo/liudaodanoo.github.io.git
+echoRed 'git remote add github git@github.com:liudaodanOo/liudaodanoo.github.io.git'
+git remote add github git@github.com:liudaodanOo/liudaodanoo.github.io.git
 
 echoRed 'git fetch --prune'
 git fetch --prune
@@ -46,8 +46,8 @@ git branch --set-upstream-to=origin/gh-pages gh-pages
 echoRed 'git push -f'
 git push -f
 
-# echoRed 'git push -f github'
-# git push -f github
+echoRed 'git push -f github'
+git push -f github
 
 cd ../../
 
