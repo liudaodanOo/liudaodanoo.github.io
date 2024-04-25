@@ -6,8 +6,8 @@
 
 根据 `HTML规范`:
 
-- window.open会将<span hl-txt-1>原文档(sourceDocument)</span>作为新打开窗口的全局对象的<span hl-txt-1>关联文档</span>。
-- 获取sessionStorage时，如果<span hl-txt-1>关联文档</span>的sessionStorage不为空，则复制一份关联文档的sessionStorage并返回。
+- window.open会将<span hl>原文档(sourceDocument)</span>作为新打开窗口的全局对象的<span hl>关联文档</span>。
+- 获取sessionStorage时，如果<span hl>关联文档</span>的sessionStorage不为空，则复制一份关联文档的sessionStorage并返回。
 
 > 想要打开新窗口时不复制sessionStorage该如何做？
 
@@ -17,7 +17,7 @@
 <a href="example.com" target="_blank">Example</a>
 ```
 
-<span hl-bg-1>参考链接：</span>
+<span hlbg>参考链接：</span>
 
 - [HTML规范 #dom-open-dev](https://html.spec.whatwg.org/multipage/nav-history-apis.html#dom-open-dev)
 - [HTML规范 #dom-sessionstorage-dev](https://html.spec.whatwg.org/multipage/webstorage.html#dom-sessionstorage-dev)

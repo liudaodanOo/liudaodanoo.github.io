@@ -36,10 +36,10 @@ public class CalculatorStaticProxy implements Calculator {
 
 ### 动态代理
 
-- JDK动态代理：被代理的类<span hl-txt-1>必须实现接口</span>，JDK动态代理会根据目标类接口生成一个代理对象，代理对象与目标对象有相同的接口
+- JDK动态代理：被代理的类<span hl>必须实现接口</span>，JDK动态代理会根据目标类接口生成一个代理对象，代理对象与目标对象有相同的接口
 - cglib：通过继承被代理的类实现代理，不需被代理类实现接口
 
-<span hl-bg-1>基于JDK动态代理技术，生成代理对象</span>
+<span hlbg>基于JDK动态代理技术，生成代理对象</span>
 
 ```java
 public class ProxyFactory {

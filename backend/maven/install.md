@@ -11,7 +11,7 @@
 
 ## 安装
 
-将下载后的文件移动到<span hl-txt-1>/usr/local</span>并解压，至此安装完成。
+将下载后的文件移动到<span hl>/usr/local</span>并解压，至此安装完成。
 
 ## 设置本地仓库目录
 

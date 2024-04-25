@@ -12,7 +12,7 @@
 
 ### 2. 实例化IOC容器
 
-给 `ApplicationContext` 构造函数提供配置信息的<span hl-txt-1>位置路径</span>，允许容器从外部资源加载配置元数据。
+给 `ApplicationContext` 构造函数提供配置信息的<span hl>位置路径</span>，允许容器从外部资源加载配置元数据。
 
 ### 3. 获取Bean（组件）
 
@@ -88,7 +88,7 @@ public class FactoryDemo {
 
 b. 编写XML文件
 
-文件路径：<span hl-txt-1>resources/spring-ioc.xml</span>
+文件路径：<span hl>resources/spring-ioc.xml</span>
 
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
@@ -120,12 +120,12 @@ b. 编写XML文件
 </beans>
 ```
 
-<span hl-bg-1>bean标签通过配置告诉IOC容器需要创建对象的组件信息：</span>
+<span hlbg>bean标签通过配置告诉IOC容器需要创建对象的组件信息：</span>
 
 - id：`bean` 的唯一标识，用于获取 `bean`
 - class：组件类的全限定名
 - factory-bean： `工厂bean` 的名称
-- factory-method：实例工厂的方法名。<span hl-txt-1>静态工厂时，必须是静态方法；指定 `工厂bean` 时，必须是非静态方法。</span>
+- factory-method：实例工厂的方法名。<span hl>静态工厂时，必须是静态方法；指定 `工厂bean` 时，必须是非静态方法。</span>
 
 ### Bean依赖注入配置（DI）
 
@@ -330,10 +330,10 @@ c. 指定包，包含注解
 
 **Bean的周期方法注解**
 
-| 注解             | 作用                                                            |
-| ---------------- | --------------------------------------------------------------- |
-| `@PostConstruct` | 指定初始化方法，必须是 <span hl-txt-1>public void 无形参</span> |
-| `@PreDestroy`    | 指定销毁方法，必须是 <span hl-txt-1>public void 无形参</span>   |
+| 注解             | 作用                                                      |
+| ---------------- | --------------------------------------------------------- |
+| `@PostConstruct` | 指定初始化方法，必须是 <span hl>public void 无形参</span> |
+| `@PreDestroy`    | 指定销毁方法，必须是 <span hl>public void 无形参</span>   |
 
 **Bean的作用域注解**
 
