@@ -31,6 +31,31 @@ ele.onclick = function (event) {
 - [MDN #event.stopPropagation](https://developer.mozilla.org/zh-CN/docs/Web/API/Event/stopPropagation)
 - [MDN #event.addEventListener()](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener)
 
+## 什么是对象原型？
+
+每个Javascript对象都有一个内置属性，称为它的**原型**。原型是对象互相继承特性的机制。
+
+> **什么是原型链？**
+
+每个Javascript对象都有原型，原型本身也是一个对象，所以原型有它自己的原型，这样逐渐形成了**原型链**。原型链终止于拥有null作为其原型的对象上。
+
+Javascript中所有对象都继承于Object.prototype。
+
+```javascript
+console.log(Object.prototype.__proto__); // null
+console.log({}.__proto__.__proto__); // null
+console.log({}.__proto__ === Object.prototype); // true
+```
+
+> **如何创建一个没有原型的对象**
+
+`Object.create(null)`
+
+```javascript
+const pureObj = Object.create(null);
+console.log(pureObj.__proto__); // undefined
+```
+
 ## 什么是作用域？
 
 **作用域**是当前的执行上下文，变量和表达式在其中可被访问。
