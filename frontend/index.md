@@ -11,4 +11,4 @@
 
 ## 问题
 
-- [Javascript](/frontend/problems/iavascript)
+- [Javascript](/frontend/problems/javascript)
