@@ -56,6 +56,10 @@ const pureObj = Object.create(null);
 console.log(pureObj.__proto__); // undefined
 ```
 
+<span hlbg>参考链接：</span>
+
+- [MDN #Object prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
+
 ## 什么是作用域？
 
 **作用域**是当前的执行上下文，变量和表达式在其中可被访问。
