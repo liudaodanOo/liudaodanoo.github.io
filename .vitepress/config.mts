@@ -2,14 +2,14 @@ import { defineConfig } from 'vitepress';
 import sidebar from './sidebar';
 
 // algolia配置
-const search = {
-	provider: 'algolia',
-	options: {
-		appId: 'Y5IBB10LWN', // Application ID
-		apiKey: 'd8fbbb73bf1966863552a496187f5556', // Search API Key
-		indexName: 'liudaodanooio', // indexName
-	},
-};
+// const search = {
+// 	provider: 'algolia',
+// 	options: {
+// 		appId: 'Y5IBB10LWN', // Application ID
+// 		apiKey: 'd8fbbb73bf1966863552a496187f5556', // Search API Key
+// 		indexName: 'liudaodanooio', // indexName
+// 	},
+// };
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -75,6 +75,6 @@ export default defineConfig({
 		// socialLinks: [{ icon: 'github', link: 'https://gitee.com/liudaodanOo/liudaodanOo' }],
 		sidebar,
 		// @ts-ignore
-		search,
+		// search,
 	},
 });
