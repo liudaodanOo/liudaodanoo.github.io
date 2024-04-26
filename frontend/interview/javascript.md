@@ -31,9 +31,31 @@ ele.onclick = function (event) {
 - [MDN #event.stopPropagation](https://developer.mozilla.org/zh-CN/docs/Web/API/Event/stopPropagation)
 - [MDN #event.addEventListener()](https://developer.mozilla.org/zh-CN/docs/Web/API/EventTarget/addEventListener)
 
+## 什么是作用域？
+
+**作用域**是当前的执行上下文，变量和表达式在其中可被访问。
+
+> **有几种作用域？**
+
+1. 全局作用域
+2. 模块作用域
+3. 函数作用域
+4. 其他
+
+   - 块级作用域
+
+> **什么是作用域链？**
+
+在JS中使用变量时，JS引擎会先在当前作用域查找变量值。如果无法找到变量，它将会到外部作用域中查找，直到找到变量或到达全局作用域。如果全局作用域中仍然找不到该变量，则会报错。
+
+<span hlbg>参考链接：</span>
+
+- [MDN #scope](https://developer.mozilla.org/zh-CN/docs/Glossary/Scope)
+- [Understanding scope and scope chain in Javascript](https://blog.bitsrc.io/understanding-scope-and-scope-chain-in-javascript-f6637978cf53)
+
 ## 什么是闭包？
 
-**闭包**是一个函数和其词法环境的组合。子函数引用了父函数中的局部变量，导致父函数执行完作用域不会随之销毁，仍可通过子函数访问/操作父函数中的局部变量，这种现象称为“闭包”。
+**闭包**是一个函数和其词法环境的组合。子函数引用了父函数中的局部变量，导致父函数执行完作用域不会随之销毁，仍可通过子函数访问父函数中的局部变量，这种现象称为“闭包”。
 
 ```javascript
 function parentFunc() {
@@ -63,6 +85,10 @@ myFunc(); // Parent
 1. 使用完闭包后，及时释放，手动将其赋值为null
 2. 减少闭包层数
 3. 使用模块化编程
+
+<span hlbg>参考链接：</span>
+
+- [MDN #closure](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Closures)
 
 ## Babel如何编译let和const？
 
@@ -136,7 +162,6 @@ var _loop = function _loop(i) {
 		console.log(i);
 	};
 };
-
 for (var i = 0; i < 3; i++) {
 	_loop(i);
 }
