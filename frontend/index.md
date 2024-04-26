@@ -5,7 +5,10 @@
 - [Vue](/frontend/vue/2.x.x/responsive)
 - [Vue router](/frontend/vue-router/4.x.x)
 
-## 杂记
+## 面试
 
-- [面试](/frontend/interview/javascript)
-- [问题](/frontend/problems/index)
+- [Javascript](/frontend/interview/javascript)
+
+## 问题
+
+- [Javascript](/frontend/problems/iavascript)

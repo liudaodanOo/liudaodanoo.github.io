@@ -25,8 +25,8 @@ const sideBar: DefaultTheme.Sidebar = {
 	],
 	'/frontend/problems': [
 		{
-			text: '问题',
-			link: '/frontend/problems/index',
+			text: 'Javascript',
+			link: '/frontend/problems/javascript',
 		},
 	],
 };

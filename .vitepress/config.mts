@@ -45,7 +45,7 @@ export default defineConfig({
 					},
 					{
 						text: '问题',
-						link: '/frontend/problems/index.md',
+						link: '/frontend/problems/javascript.md',
 						activeMatch: '/frontend/problems',
 					},
 				],
