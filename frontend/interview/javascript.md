@@ -56,6 +56,14 @@ const pureObj = Object.create(null);
 console.log(pureObj.__proto__); // undefined
 ```
 
+> **什么是显示原型、什么是隐式原型？**
+
+**显示原型**：[Constructor].prototype
+
+**隐式原型**：实例的[[Prototype]]属性，即[instance].\_\_proto\_\_
+
+[instance].\_\_proto\_\_指向[Constructor].prototype。
+
 <span hlbg>参考链接：</span>
 
 - [MDN #Object prototypes](https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/Object_prototypes)
@@ -75,7 +83,7 @@ console.log(pureObj.__proto__); // undefined
 
 > **什么是作用域链？**
 
-在JS中使用变量时，JS引擎会先在当前作用域查找变量值。如果无法找到变量，它将会到外部作用域中查找，直到找到变量或到达全局作用域。如果全局作用域中仍然找不到该变量，则会报错。
+**作用域链**是JS中用于查找变量或函数的一种机制。在JS中使用变量时，JS引擎会先在当前作用域查找变量值。如果无法找到变量，它将会到外部作用域中查找，直到找到变量或到达全局作用域。如果全局作用域中仍然找不到该变量，则会报错。
 
 <span hlbg>参考链接：</span>
 
@@ -197,3 +205,75 @@ for (var i = 0; i < 3; i++) {
 
 functions[0](); // 0
 ```
+
+## 谈谈你对this的理解
+
+**this**是关联一段代码的上下文的关键词。
+
+<span hl>普通函数</span>中this的值由该函数的调用方式决定，在运行时绑定。
+
+- 作为单独的函数调用，this通常指向全局对象（非严格模式）或undefined（严格模式）
+
+- 作为对象的函数调用时，this指向这个对象
+
+<span hl>箭头函数</span>中this的值会在定义时从其父作用域的this继承。所以箭头函数无法通过Function.prototype.call、Function.prototype.apply、Function.prototype.bind修改this。
+
+<span hl>构造函数</span>中this会绑定到构造的新对象，除非构造函数返回其他非原始值。
+
+<span hl>全局上下文</span>中this的值会根据运行时的环境确定（调用者）。在脚本的顶层，无论是否严格模式，this都指向全局对象。若脚本被当作模块加载，则this的值为undefined。
+
+> **如何修改this的指向？**
+
+call、apply、bind，对于普通函数还可以通过作为对象的函数调用改变this指向。
+
+> **this的优先级？**
+
+通过call、apply、bind、new进行this绑定的情况称为**显示绑定**。
+
+通过对象调用关系确定this指向的情况称为**隐式绑定**。
+
+它们的优先级由高到低分别为：<span hl>new > call、apply、bind > 隐式绑定</span>。
+
+> **call、apply、bind的区别是什么？**
+
+它们都是用来改变函数this指向的。
+
+call和apply会改变函数this指向的同时，调用函数。call接收给定的this值和单独传递的参数。apply接收给定的this值和一个参数数组。
+
+bind接收给定的this值和单独传递的参数，它不会调用原函数，而会创建一个新的函数并返回。bind还可以用来固定一些参数。
+
+```javascript
+function func() {
+	console.log(this.name + ' ' + [...arguments]);
+}
+const obj = {
+	name: 'foo',
+};
+
+func.call(obj, 1, 2, 3, 4); // foo 1,2,3,4
+func.apply(obj, [1, 2, 3, 4]); // foo 1,2,3,4
+
+const newFunc = func.bind(obj, 1, 2, 3, 4);
+newFunc(); // foo 1,2,3,4
+newFunc(5, 6, 7, 8); // foo 1,2,3,4,5,6,7,8
+```
+
+<span hlbg>参考链接：</span>
+
+- [MDN #this](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/this)
+- [MDN #call](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/call)
+- [MDN #apply](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/apply)
+- [MDN #bind](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Function/bind)
+
+## new操作符具体做了什么？
+
+**new操作符**允许我们实例化一个内置类型或自定义类型的对象。new操作符会依次做如下几件事情：
+
+1. 创建一个空的JS对象：**newInstance**
+2. 将newInstance.\_\_proto\_\_指向构造函数的prototype
+3. 将this指向newInstance，根据传入的参数执行构造函数
+4. 如果没有显示指定返回值，则返回newInstance；如果显示指定了返回的对象（非基本类型），则返回指定的对象
+
+<span hlbg>参考链接：</span>
+
+- [MDN #new](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)

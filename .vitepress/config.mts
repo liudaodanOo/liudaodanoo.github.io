@@ -1,4 +1,5 @@
 import { defineConfig } from 'vitepress';
+import { withMermaid } from 'vitepress-plugin-mermaid';
 import sidebar from './sidebar';
 
 // algolia配置
@@ -11,8 +12,7 @@ import sidebar from './sidebar';
 // 	},
 // };
 
-// https://vitepress.dev/reference/site-config
-export default defineConfig({
+const vitepressOptions = defineConfig({
 	head: [
 		[
 			'link', // 设置 favicon.ico，注意图片放在 public 文件夹下
@@ -77,4 +77,16 @@ export default defineConfig({
 		// @ts-ignore
 		// search,
 	},
+});
+
+// https://vitepress.dev/reference/site-config
+export default withMermaid({
+	// // optionally, you can pass MermaidConfig
+	// mermaid: {
+	// 	// refer https://mermaid.js.org/config/setup/modules/mermaidAPI.html#mermaidapi-configuration-defaults for options
+	// },
+	// mermaidPlugin: {
+	// 	class: 'mermaid my-class', // set additional css classes for parent container
+	// },
+	...vitepressOptions,
 });
