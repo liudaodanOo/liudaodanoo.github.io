@@ -1,9 +1,9 @@
 # 前端
 
-## 轮子
+## 框架
 
 - [Vue](/frontend/vue/2.x.x/responsive)
-- [Vue router](/frontend/vue-router/4.x.x)
+- [Vue Router](/frontend/vue-router/4.x.x)
 
 ## 面试
 

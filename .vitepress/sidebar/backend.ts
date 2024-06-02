@@ -1,7 +1,7 @@
 import { DefaultTheme } from 'vitepress';
 
 const sideBar: DefaultTheme.Sidebar = {
-	'/backend/maven': [
+	'/backend/maven/': [
 		{
 			text: 'Maven',
 			items: [
@@ -24,7 +24,7 @@ const sideBar: DefaultTheme.Sidebar = {
 			],
 		},
 	],
-	'/backend/spring': [
+	'/backend/spring/': [
 		{
 			text: 'Spring',
 			base: '/backend/spring',
@@ -50,6 +50,33 @@ const sideBar: DefaultTheme.Sidebar = {
 				{
 					text: 'AOP',
 					link: '/aop',
+				},
+			],
+		},
+	],
+
+	'/backend/springboot': [
+		{
+			text: 'SpringBoot',
+			base: '/backend/springboot',
+			items: [
+				{
+					text: 'Mybatis',
+					link: '/mybatis',
+				},
+				{
+					text: 'Mybatis-Plus',
+					link: '/mybatis-plus',
+				},
+				{
+					text: 'Spring Cache',
+					base: '/backend/springboot/springCache',
+					link: '/index',
+					items: [{ text: 'Redis', link: '/redis' }],
+				},
+				{
+					text: 'RabbitMQ',
+					link: '/rabbitmq',
 				},
 			],
 		},

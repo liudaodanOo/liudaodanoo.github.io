@@ -62,7 +62,12 @@ const vitepressOptions = defineConfig({
 					{
 						text: 'Spring',
 						link: '/backend/spring/framework',
-						activeMatch: '/backend/spring',
+						activeMatch: '/backend/spring/',
+					},
+					{
+						text: 'SpringBoot',
+						link: '/backend/springboot/mybatis',
+						activeMatch: '/backend/springboot',
 					},
 				],
 			},
