@@ -277,3 +277,114 @@ newFunc(5, 6, 7, 8); // foo 1,2,3,4,5,6,7,8
 <span hlbg>参考链接：</span>
 
 - [MDN #new](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/new)
+
+## 什么是函数柯里化？
+
+**柯里化**（Currying）是一种用于改造多参函数的技术。将多参函数分成多个接收单一参数的函数，并依次返回。
+柯里化不仅被用于Javascript，还被用于其他变成语言。
+
+```javascript
+const add = (num1, num2, num3) => {
+	return num1 + num2 + num3;
+};
+add(1, 2, 3); // 6
+```
+
+<i>柯里化后：</i>
+
+```javascript
+const curryingAdd = (num1) => {
+	return (num2) => {
+		return (num3) => {
+			return num1 + num2 + num3;
+		};
+	};
+};
+curryingAdd(1)(2)(3); // 6
+```
+
+通过以上代码可能还是无法体会到柯里化的好处，那么看看如下代码呢：
+
+```javascript
+//校验手机号
+const regexpValidate = (regexp, warn, phone) => {
+	if (phone && !regexp.test(phone)) {
+		return Promise.reject(warn);
+	}
+	return Promise.resolve();
+};
+
+//调用校验
+regexpValidate(/^(13[0-9]|14[0-9]|15[0-9]|166|17[0-9]|18[0-9]|19[8|9])\d{8}$/, '手机号格式不符', 187****0000);
+
+// 如果有多个号码，则
+regexpValidate(/^(13[0-9]|14[0-9]|15[0-9]|166|17[0-9]|18[0-9]|19[8|9])\d{8}$/, '手机号格式不符', 187****0001);
+regexpValidate(/^(13[0-9]|14[0-9]|15[0-9]|166|17[0-9]|18[0-9]|19[8|9])\d{8}$/, '手机号格式不符', 187****0002);
+regexpValidate(/^(13[0-9]|14[0-9]|15[0-9]|166|17[0-9]|18[0-9]|19[8|9])\d{8}$/, '手机号格式不符', 187****0003);
+regexpValidate(/^(13[0-9]|14[0-9]|15[0-9]|166|17[0-9]|18[0-9]|19[8|9])\d{8}$/, '手机号格式不符', 187****0004);
+```
+
+正则、提示信息是固定的值。但每次调用regexpValidate()都需要传入正则、提示信息，显得很冗余。
+
+```javascript
+const regexpValidateCurrying = (regExp) => {
+	return (warn) => {
+		return (val) => {
+			if (val && !regExp.test(val)) {
+				return Promise.reject(warn);
+			}
+
+			return Promise.resolve();
+		};
+	};
+};
+
+const validatePhone = regexpValidateCurrying(/^(13[0-9]|14[0-9]|15[0-9]|166|17[0-9]|18[0-9]|19[8|9])\d{8}$/)('手机号格式不符');
+
+// 多个号码
+validatePhone(187****0000);
+validatePhone(187****0001);
+validatePhone(187****0002);
+validatePhone(187****0003);
+validatePhone(187****0004);
+```
+
+通过柯里化创建validatePhone()专门用于手机号校验，使用起来更加简洁方便。
+
+> 柯里化的作用是什么？
+
+1. 提高函数的可复用性和可读性，方便进行模块化开发
+2. 可以生成一系列的新函数，增加代码的灵活性和可扩展性
+3. 简化复杂的函数调用，使代码更易于理解和维护
+
+> 柯里化和偏函数的区别（什么是偏函数、偏应用函数）？
+
+柯里化是将一个多参函数转换为多个单一参数函数的技术。
+
+**偏函数**则是固定一个函数的一部分参数，返回一个新的函数等待剩余参数的传入。
+
+```javascript
+// 使用偏函数固定参数
+const validatePhoneNew = regexpValidate.bind(
+	null,
+	/^(13[0-9]|14[0-9]|15[0-9]|166|17[0-9]|18[0-9]|19[8|9])\d{8}$/,
+	'手机号格式不符'
+);
+
+// 多个号码
+validatePhoneNew(187****0000);
+validatePhoneNew(187****0001);
+validatePhoneNew(187****0002);
+validatePhoneNew(187****0003);
+validatePhoneNew(187****0004);
+```
+
+> 什么是高阶函数？
+
+把函数作为参数传入，这样的函数称为**高阶函数**。常见的高阶函数：Array.prototype.forEach()、Array.prototype.map()、setTimeout()、setInterval()、Promise.prototype.then()。
+
+<span hlbg>参考链接：</span>
+
+- [Javascript高级篇之函数柯里化](https://juejin.cn/post/7111902909796712455)
+- [JavaScript中的函数柯里化](https://docs.pingcode.com/ask/89142.html)
+- [一文讲懂什么是函数柯里化，柯里化的目的及其代码实现](https://cloud.tencent.com/developer/article/1794267)
