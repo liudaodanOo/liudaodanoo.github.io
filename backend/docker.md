@@ -83,6 +83,21 @@ docker images
 
 # 删除镜像
 docker rmi
+
+# 提交镜像
+docker commit [-a AUTHOR_NAME] [-c CHANGE_LIST] [-m COMMIT_MSG] [-p]
+
+# 保存镜像
+docker save [-o FILE_NAME]
+
+# 加载镜像
+docker load [-i IMAGE_TAR_PATH]
+
+# 分享镜像
+docker login
+docker tag IAMGE_NAME:IMAGE_TAG DOCKER_USERNAME/IAMGE_NAME:IMAGE_TAG
+docker push DOCKER_USERNAME/IAMGE_NAME:IMAGE_TAG
+
 ```
 
 ## 容器操作
@@ -91,10 +106,13 @@ docker rmi
 
 ```shell
 # 运行容器
-docker run
+docker run [-d] [-p SYSTEM_PORT:CONTAINER_PORT] [--name CONTAINER_NAME] [--network NETWORK_NAME]
 
 # 查看容器
-docker ps
+docker ps [-a]
+
+# 查看容器细节
+docker inspect
 
 # 停止容器
 docker stop
@@ -109,13 +127,44 @@ docker restart
 docker stats
 
 # 查看日志
-docker log
+docker logs
 
 # 进入容器
-docker exec
+docker exec [-it]
 
 # 删除容器
-docker rm
+docker rm [-f]
+```
+
+## 存储
+
+```shell
+# 目录挂载 系统目录挂载到容器对应的目录
+docker run [OPTIONS] -v SYSTEM_PATH:CONTAINER_PATH
+
+# 卷映射 容器目录映射到系统docker约定的目录下
+# VOLUME_NAME 不能以/开头
+# 映射的地址在系统/var/lib/docker/volumes/[VOLUME_NAME]下
+docker run [OPTIONS] -v VOLUME_NAME:CONTAINER_PATH
+
+# 查看卷
+docker volume ls
+
+# 创建卷
+docker volume create VOLUME_NAME
+
+# 查看卷的信息
+docker volume inspect VOLUME_NAME
+```
+
+## 网络
+
+```shell
+# 创建一个网络
+docker network create NETWORK_NAME
+
+# 查看网络列表
+docker network ls
 ```
 
 1. 下载镜像
