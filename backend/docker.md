@@ -69,8 +69,6 @@ sudo systemctl restart docker
 
 ## 镜像操作
 
-命令：
-
 ```shell
 # 检索镜像
 docker search
@@ -102,14 +100,12 @@ docker push DOCKER_USERNAME/IAMGE_NAME:IMAGE_TAG
 
 ## 容器操作
 
-命令：
-
 ```shell
 # 运行容器
 docker run [-d] [-p SYSTEM_PORT:CONTAINER_PORT] [--name CONTAINER_NAME] [--network NETWORK_NAME]
 
 # 查看容器
-docker ps [-a]
+docker ps [-a] [-s]
 
 # 查看容器细节
 docker inspect
@@ -167,8 +163,100 @@ docker network create NETWORK_NAME
 docker network ls
 ```
 
-1. 下载镜像
-2. 启动容器
-3. 修改页面
-4. 保存镜像
-5. 分享社区
+## Docker Compose
+
+```shell
+# 上线（第一次创建并启动）
+docker compose [-f YAML_FILE_PATH] up [-d]
+
+# 下线（移除容器及相关资源）
+docker compose [-f YAML_FILE_PATH] down [--rmi IMAGES_NAME] [-v]
+
+# 启动
+docker compose start
+
+# 停止
+docker compose stop
+
+# 扩容
+docker compose scale
+```
+
+```text
+# compose.yaml
+顶级元素
+    name        名字
+    services    服务
+    networks    网络
+    volumes     卷
+    configs     配置
+    secrets     密钥
+```
+
+示例
+
+```yaml
+name: myblog
+services:
+  mysql:
+    container_name: mysql # 容器名称，不指定则默认service名称
+    image: mysql:8.0 # 镜像
+    ports: # 端口
+      - '3306:3306'
+    environment: # 环境变量
+      - MYSQL_ROOT_PASSWORD=123456
+      - MYSQL_DATABASE=wordpress
+    volumes: # 卷
+      - mysql-data:/var/lib/mysql
+      - /app/myconf:/etc/mysql/conf.d
+    restart: always # 开机启动
+    networks: # 网络
+      - blog
+
+  wordpress:
+    container_name: wordpress
+    image: wordpress
+    ports:
+      - '8080:80'
+    environment:
+      - WORDPRESS_DB_HOST=mysql
+      - WORDPRESS_DB_USER=root
+      - WORDPRESS_DB_PASSWORD=123456
+      - WORDPRESS_DB_NAME=wordpress
+    volumes:
+      - wordpress:/var/www/html
+    restart: always
+    networks:
+      - blog
+    depends_on: # 控制启动顺序，在依赖启动后再启动
+      - mysql
+volumes: # 声明卷
+  mysql-data:
+  wordpress:
+networks: # 声明网络
+  blog:
+```
+
+## Dockerfile制作镜像
+
+编写Dockerfile
+
+```Dockerfile
+FROM openjdk:17
+
+LABEL author=liudaodan
+
+COPY app.jar /app.jar
+
+EXPOSE 8080
+
+ENTRYPOINT ["java", "-jar", "/app.jar"]
+```
+
+```shell
+docker build -f DOCKERFILE_PATH -t IMAGE_NAME:IMAGE_TAG WORK_PATH
+```
+
+**镜像分层机制**
+![image.jpg](/images/docker/singleton-container.jpg)
+![image.jpg](/images/docker/multiple-container.jpg)

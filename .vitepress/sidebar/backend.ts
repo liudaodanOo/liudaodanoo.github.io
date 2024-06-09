@@ -81,6 +81,12 @@ const sideBar: DefaultTheme.Sidebar = {
 			],
 		},
 	],
+	'/backend/docker': [
+		{
+			text: 'Dokcer',
+			link: '/backend/docker',
+		},
+	],
 };
 
 export default sideBar;

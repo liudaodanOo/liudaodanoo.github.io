@@ -69,6 +69,11 @@ const vitepressOptions = defineConfig({
 						link: '/backend/springboot/mybatis',
 						activeMatch: '/backend/springboot',
 					},
+					{
+						text: 'Docker',
+						link: '/backend/docker',
+						activeMatch: '/backend/docker',
+					},
 				],
 			},
 			// {
