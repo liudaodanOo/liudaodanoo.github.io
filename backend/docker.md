@@ -260,3 +260,22 @@ docker build -f DOCKERFILE_PATH -t IMAGE_NAME:IMAGE_TAG WORK_PATH
 **镜像分层机制**
 ![image.jpg](/images/docker/singleton-container.jpg)
 ![image.jpg](/images/docker/multiple-container.jpg)
+
+## 启动一些镜像
+
+安装mysql
+
+```shell
+docker run -d -p 3306:3306 \
+--name mysql-puzzle \
+--privileged=true \
+--restart unless-stopped \
+-v /app/mysql-puzzle/data:/var/lib/mysql \
+-v /app/mysql-puzzle/logs:/logs \
+-v /etc/localtime:/etc/localtime:ro \
+-v mysql-puzzle:/etc/mysql \
+-e MYSQL_ROOT_PASSWORD=root \
+mysql:latest \
+--character-set-server=utf8mb4 \
+--collation-server=utf8mb4_unicode_ci
+```
