@@ -2,19 +2,19 @@
 
 我将导航的流程分为了三个阶段：
 
-## 初始化阶段
+- 初始化阶段
 
 1. 根据配置创建、返回带有 install 函数的 router 对象
 2. 执行 install 函数，注册 RouterView 组件，将表示当前路由的响应式对象提供给后代组件
 3. 在 RouterView 组件中注入 currentRouter ，观察 currentRouter 的变化
 
-## 路由切换阶段
+- 路由切换阶段
 
 1. 通过匹配器匹配对应的路由
 2. 触发路由守卫
 3. 修改 currentRouter
 
-## 更新页面阶段
+- 更新页面阶段
 
 1. 根据 currentRouter 找到需要渲染的组件
 2. 通过渲染函数h创建组件的 vnode ，并返回

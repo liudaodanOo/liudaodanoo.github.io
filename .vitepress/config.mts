@@ -34,18 +34,13 @@ const vitepressOptions = defineConfig({
 				activeMatch: '/fronend',
 				items: [
 					{
-						text: 'Vue',
-						link: '/frontend/vue/2.x.x/responsive',
-						activeMatch: '/frontend/vue',
-					},
-					{
-						text: '面试题',
-						link: '/frontend/interview/javascript',
-						activeMatch: '/frontend/interview',
+						text: '概念',
+						link: '/frontend/concepts/index',
+						activeMatch: '/frontend/concepts',
 					},
 					{
 						text: '问题',
-						link: '/frontend/problems/javascript.md',
+						link: '/frontend/problems/javascript',
 						activeMatch: '/frontend/problems',
 					},
 				],

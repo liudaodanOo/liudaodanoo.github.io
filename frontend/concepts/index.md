@@ -5,8 +5,4 @@
 - [Javascript](/frontend/concepts/javascript)
 - [Webpack](/frontend/concepts/webpack/index)
 - [Vue Router](/frontend/concepts/vuerouter)
-- [Vue](/frontend/vue/2.x.x/responsive)
-
-## 问题
-
-- [Javascript](/frontend/problems/javascript)
+- [Vue @TODO](/frontend/vue/2.x.x/responsive)

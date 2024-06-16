@@ -1,4 +1,4 @@
-# 关于原生JS的面试题
+# 关于原生JS的概念
 
 ## 什么是事件流？
 
@@ -8,7 +8,7 @@
 2. 触发阶段（Target Phase）：事件对象到达事件对象的目标。如果<span hl>Event.bubbles = false</span>，对事件对象的处理在这个阶段后就会结束
 3. 冒泡阶段（Bubble Phase）：事件以相反的顺序在事件对象的祖先中传播，从目标父对象到Window
 
-![image.svg](/images/interview/eventflow.svg)
+![image.svg](/images/concepts/eventflow.svg)
 
 > **如何取消事件冒泡？**
 

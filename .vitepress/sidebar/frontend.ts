@@ -12,15 +12,33 @@ const sideBar: DefaultTheme.Sidebar = {
 				},
 			],
 		},
-		{
-			text: 'Router.v4+',
-			link: '/frontend/vue/router/4.x.x',
-		},
 	],
-	'/frontend/interview': [
+
+	// Javascript
+	'/frontend/concepts/javascript': [
 		{
 			text: 'Javascript',
-			link: '/frontend/interview/javascript',
+			link: '/frontend/concepts/javascript',
+		},
+	],
+	// Webpack
+	'/frontend/concepts/webpack': [
+		{
+			text: 'Webpack',
+			link: '/frontend/concepts/webpack/index',
+			items: [
+				{
+					text: '构建流程',
+					link: '/frontend/concepts/webpack/buildprocess',
+				},
+			],
+		},
+	],
+	// Vue Router
+	'/frontend/concepts/vuerouter': [
+		{
+			text: 'Vue Router',
+			link: '/frontend/concepts/vuerouter',
 		},
 	],
 	'/frontend/problems': [
