@@ -1,0 +1,1 @@
+import{_ as e,o as a,c as t,R as n}from"./chunks/framework.S8W019Nk.js";const f=JSON.parse('{"title":"后端","description":"","frontmatter":{},"headers":[],"relativePath":"backend/index.md","filePath":"backend/index.md"}'),r={name:"backend/index.md"},i=n("",2),o=[i];function c(l,d,s,_,h,m){return a(),t("div",null,o)}const k=e(r,[["render",c]]);export{f as __pageData,k as default};
