@@ -4,7 +4,7 @@
 
 ### 继承的概念
 
-`Maven` 继承是指在 `Maven` 的项目中，让子模块从父模块中继承配置信息的机制。
+<span hl>Maven</span>继承是指在Maven的项目中，让子模块从父模块中继承配置信息的机制。
 
 ![image.jpg](/images/maven/inherit.jpg)
 
@@ -17,7 +17,7 @@
 
 1. 父工程
 
-父工程用于管理子工程，所以 `packaging` 必须为<span hl>pom</span>。
+父工程用于管理子工程，所以`packaging`必须为`pom`。
 
 ```xml
 <groupId>com.oo.maven</groupId>
@@ -29,7 +29,7 @@
 
 2. 子工程
 
-如果子工程坐标中的 `groupId` 和 `version` 与父工程一致，那么可以省略。
+如果子工程坐标中的`groupId`和`version`与父工程一致，那么可以省略。
 
 ```xml
 <!-- 使用parent标签指定当前工程的父工程 -->
@@ -51,7 +51,7 @@
 
 1. 父工程声明依赖信息
 
-父工程在 `dependencyManagement标签` 中管理依赖信息，被管理的依赖并没有真正被引入到工程。
+父工程在`dependencyManagement`标签中管理依赖信息，被管理的依赖并没有真正被引入到工程。
 
 ```xml
 <dependencyManagement>
@@ -86,7 +86,7 @@
 ```
 
 2. 子工程引入依赖
-   子工程引用父工程中的依赖信息时，可以把版本号去掉。版本号去掉就表示子工程中这个依赖的版本由父工程决定，具体来说是由父工程的 `dependencyManagement` 来决定。
+   子工程引用父工程中的依赖信息时，可以把版本号去掉。版本号去掉就表示子工程中这个依赖的版本由父工程决定，具体来说是由父工程的dependencyManagement来决定。
 
 ```xml
 <dependencies>
@@ -117,7 +117,7 @@
 
 ### 聚合的概念
 
-`Maven` 聚合是指将多个项目组织到一个父级项目中，通过出发父工程的构建统一按顺序触发子工程构建的过程。
+<span hl>聚合</span>是指将多个项目组织到一个父级项目中，通过出发父工程的构建统一按顺序触发子工程构建的过程。
 
 ### 聚合的作用
 

@@ -31,6 +31,10 @@ const sideBar: DefaultTheme.Sidebar = {
 					text: '构建流程',
 					link: '/frontend/concepts/webpack/buildprocess',
 				},
+				{
+					text: '模块热替换',
+					link: '/frontend/concepts/webpack/hmr',
+				},
 			],
 		},
 	],

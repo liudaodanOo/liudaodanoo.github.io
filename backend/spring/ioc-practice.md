@@ -4,7 +4,7 @@
 
 ### 1. 配置元数据
 
-编写交给 `Spring IOC容器` 管理的组件的信息，配置方式有三种：
+编写交给Spring IOC容器管理的组件的信息，配置方式有三种：
 
 - XML
 - 注解
@@ -12,11 +12,11 @@
 
 ### 2. 实例化IOC容器
 
-给 `ApplicationContext` 构造函数提供配置信息的<span hl>位置路径</span>，允许容器从外部资源加载配置元数据。
+给**ApplicationContext**构造函数提供配置信息的<span hl>位置路径</span>，允许容器从外部资源加载配置元数据。
 
 ### 3. 获取Bean（组件）
 
-`ApplicationContext` 是一个高级工厂的接口，能够维护不同 `Bean` 及其依赖项的注册表。通过使用方法 `T getBean(String name, Class<T> requiredType)` 可以检索 `Bean的实例` 。
+**ApplicationContext**是一个高级工厂的接口，能够维护不同**Bean**及其依赖项的注册表。通过使用方法 `T getBean(String name, Class<T> requiredType)` 可以检索Bean的实例。
 
 ## XML方式
 
@@ -122,10 +122,10 @@ b. 编写XML文件
 
 <span hlbg>bean标签通过配置告诉IOC容器需要创建对象的组件信息：</span>
 
-- id：`bean` 的唯一标识，用于获取 `bean`
+- id：bean的唯一标识，用于获取bean
 - class：组件类的全限定名
-- factory-bean： `工厂bean` 的名称
-- factory-method：实例工厂的方法名。<span hl>静态工厂时，必须是静态方法；指定 `工厂bean` 时，必须是非静态方法。</span>
+- factory-bean： 工厂bean的名称
+- factory-method：实例工厂的方法名。<span hl>静态工厂时，必须是静态方法；指定工厂bean时，必须是非静态方法。</span>
 
 ### Bean依赖注入配置（DI）
 
@@ -287,14 +287,14 @@ package com.oo.ioc;
 public class OoDao {}
 ```
 
-| 注解          | 作用                                                                               |
-| ------------- | ---------------------------------------------------------------------------------- |
-| `@Component`  | 用于描述 `Spring中的Bean` ，仅仅表示容器中的一个组件，并且可以作用在应用的任何层次 |
-| `@Controller` | 通常作用在 `控制层（Controller）` ，用于将控制层的类标识为 `Spring中的Bean`        |
-| `@Service`    | 通常作用在 `业务层（Service）` ，用于将业务层的类标识为 `Spring中的Bean`           |
-| `@Repository` | 通常作用在 `数据访问层（Dao）` ，用于将数据访问层的类标识为 `Spring中的Bean`       |
+| 注解        | 作用                                                                            |
+| ----------- | ------------------------------------------------------------------------------- |
+| @Component  | 用于描述Spring中的Bean ，仅仅表示容器中的一个组件，并且可以作用在应用的任何层次 |
+| @Controller | 通常作用在 控制层（Controller） ，用于将控制层的类标识为 Spring中的Bean         |
+| @Service    | 通常作用在 业务层（Service） ，用于将业务层的类标识为 Spring中的Bean            |
+| @Repository | 通常作用在 数据访问层（Dao） ，用于将数据访问层的类标识为 Spring中的Bean        |
 
-可通过 `@Component("alias")` 或 `@Component(value = "alias")` 重新指定 `Bean` 在 `IOC容器` 中的唯一标识
+可通过 `@Component("alias")` 或 `@Component(value = "alias")` 重新指定Bean在IOC容器中的唯一标识
 
 > 源码中 `@Controller`、`@Service`、`@Repository` 只是在 `@Component` 注解的基础上起了三个新的名称，没有语法层面的区别，只是为了便于分辨组件的作用，提高代码的可读性、程序结构严谨性
 
@@ -322,26 +322,26 @@ c. 指定包，包含注解
 </context:component-scan>
 ```
 
-- `context:component-scan` 标签：用 `base-package属性` 指定 `IOC容器` 去哪些包下查找注解类，并添加到容器中；多个包以 `,` 分割；指定包相当于指定了子包内的所有类
-- `context:exclude-filter` 标签：不扫描指定注解
-- `context:include-filter` 标签：扫描指定注解
+- context:component-scan标签：用`base-package`属性指定IOC容器去哪些包下查找注解类，并添加到容器中；多个包以 `,` 分割；指定包相当于指定了子包内的所有类
+- context:exclude-filter标签：不扫描指定注解
+- context:include-filter标签：扫描指定注解
 
 3. 其他注解
 
 **Bean的周期方法注解**
 
-| 注解             | 作用                                                      |
-| ---------------- | --------------------------------------------------------- |
-| `@PostConstruct` | 指定初始化方法，必须是 <span hl>public void 无形参</span> |
-| `@PreDestroy`    | 指定销毁方法，必须是 <span hl>public void 无形参</span>   |
+| 注解           | 作用                                                      |
+| -------------- | --------------------------------------------------------- |
+| @PostConstruct | 指定初始化方法，必须是 <span hl>public void 无形参</span> |
+| @PreDestroy    | 指定销毁方法，必须是 <span hl>public void 无形参</span>   |
 
 **Bean的作用域注解**
 
-| 注解     | 作用             |
-| -------- | ---------------- |
-| `@Scope` | 指定Bean的作用域 |
+| 注解   | 作用             |
+| ------ | ---------------- |
+| @Scope | 指定Bean的作用域 |
 
-`@Scope` 注解的可选值
+@Scope 注解的可选值
 
 | 可选值                               | 作用                                    | 创建对象的时机  |
 | ------------------------------------ | --------------------------------------- | --------------- |
@@ -352,10 +352,10 @@ c. 指定包，包含注解
 
 **Bean的自动装配注解**
 
-| 注解         | 作用                       |
-| ------------ | -------------------------- |
-| `@Autowired` | 自动装配Bean的对象         |
-| `@Qualifier` | 指定要查找并装配的Bean的id |
+| 注解       | 作用                       |
+| ---------- | -------------------------- |
+| @Autowired | 自动装配Bean的对象         |
+| @Qualifier | 指定要查找并装配的Bean的id |
 
 工作流程：
 
@@ -363,7 +363,7 @@ c. 指定包，包含注解
 
 **Bean的属性赋值注解**
 
-a. 声明外部配置 `application.properties` 文件
+a. 声明外部配置<span hl>application.properties</span>文件
 
 ```properties
 # 应用名称
@@ -376,15 +376,15 @@ b. Spring的XML文件中引入外部配置
 <context:property-placeholder location="classpath:application.properties" />
 ```
 
-c. 使用 `@Value` 注解读取配置
+c. 使用`@Value`注解读取配置
 
-| 注解     | 作用                                    |
-| -------- | --------------------------------------- |
-| `@Value` | 读取配置：@Value("${application.name}") |
+| 注解   | 作用                                    |
+| ------ | --------------------------------------- |
+| @Value | 读取配置：@Value("${application.name}") |
 
 ## 配置类方式
 
-1. 使用 `@Configuration注解` 将一个普通类标记为 `Spring配置类`
+1. 使用`@Configuration`将一个普通类标记为Spring配置类
 
 ```java
 import org.springframework.context.annotation.ComponentScan;
@@ -400,7 +400,7 @@ import org.springframework.context.annotation.PropertySource;
 public class MyConfiguration {}
 ```
 
-2. 使用 `@Bean注解` 将一个普通类标记为 `Spring组件`
+2. 使用`@Bean`将一个普通类标记为Spring组件
 
 ```java
 // 标注当前类是配置类，替代application.xml
@@ -430,7 +430,7 @@ public class MyConfiguration {
 }
 ```
 
-`@Bean注解` 的用法：
+`@Bean`的用法：
 
 - 指定Bean的别名：@Bean("alias")
 - 指定初始化和销毁方法：@Bean(initMethod="init", destroyMethod="cleanup")

@@ -1,6 +1,6 @@
 # 工程创建
 
-## `GAVP` 属性
+## GAVP属性
 
 - G: groupId 组织标识
 - A: artifactId 产品标识
@@ -9,14 +9,14 @@
 
 ### GAV 规范
 
-1. `groupId` 的规范
+1. groupId的规范
 
 ```text
 # 最多4级
 com.[公司/BU].[业务线].[子业务线]
 ```
 
-2. `artifactId` 的规范
+2. artifactId的规范
 
    语义不重复不遗漏，先到仓库中心去查证一下。
 
@@ -29,7 +29,7 @@ oo-api
 oo-tool
 ```
 
-3. `version` 的规范
+3. version的规范
 
 ```text
 # 正确的例子
@@ -44,10 +44,10 @@ oo-tool
 
 ### packaging 规范
 
-`packaging` 用于指定打包后的文件类型，有如下几个值：
+packaging用于指定打包后的文件类型，有如下几个值：
 
-- jar（默认值）：普通的Java工程，打包后文件的后缀名是 `.jar`
-- war：代表Java的Web工程，打包后文件的后缀名是 `.war`
+- jar（默认值）：普通的Java工程，打包后文件的后缀名是 **.jar**
+- war：代表Java的Web工程，打包后文件的后缀名是 **.war**
 - pom：表示不会打包，用来做继承的父工程
 
 ## 工程目录说明

@@ -15,13 +15,13 @@
 
 ## 设置本地仓库目录
 
-`settings.xml` 文件路径：`/usr/local/apache-maven-x.x.x/conf/settings.xml`
+**settings.xml**文件路径：/usr/local/apache-maven-x.x.x/conf/settings.xml
 
 ```shell
 vim /usr/local/apache-maven-x.x.x/conf/settings.xml
 ```
 
-找到 `localRepository`
+找到`localRepository`
 
 ```xml
 <localRepository>本地仓库路径</localRepository>
@@ -61,4 +61,4 @@ mvn --version
 mvn -v
 ```
 
-如果输出了 `Maven` 的版本信息，说明安装成功。
+如果输出了Maven的版本信息，说明安装成功。

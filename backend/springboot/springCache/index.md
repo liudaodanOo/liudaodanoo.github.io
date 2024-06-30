@@ -27,9 +27,9 @@ public class DemoApplication {
 | 参数名 | 作用 |
 |---|---|
 | value | 配置缓存的分区（模块），相当于缓存的标识 |
-| key | 缓存分区（模块）下的具体标识，支持根据`SpringEL`表达式动态命名 |
+| key | 缓存分区（模块）下的具体标识，支持根据<span hl>SpringEL</span>表达式动态命名 |
 | cacheManager | 选择配置类中的缓存配置对象，不选则走默认 |
-| condition | 注解生效的条件，支持`SpringEL`表达式 |
+| condition | 注解生效的条件，支持<span hl>SpringEL</span>表达式 |
 
 ### @CachePut
 
@@ -39,9 +39,9 @@ public class DemoApplication {
 | 参数名 | 作用 |
 |---|---|
 | value | 配置缓存的分区（模块），相当于缓存的标识 |
-| key | 缓存分区（模块）下的具体标识，支持根据`SpringEL`表达式动态命名 |
+| key | 缓存分区（模块）下的具体标识，支持根据<span hl>SpringEL</span>表达式动态命名 |
 | cacheManager | 选择配置类中的缓存配置对象，不选则走默认 |
-| condition | 注解生效的条件，支持`SpringEL`表达式 |
+| condition | 注解生效的条件，支持<span hl>SpringEL</span>表达式 |
 
 ### @CacheEvict
 
@@ -51,9 +51,9 @@ public class DemoApplication {
 | 参数名 | 作用 |
 |---|---|
 | value | 配置缓存的分区（模块），相当于缓存的标识 |
-| key | 缓存分区（模块）下的具体标识，支持根据`SpringEL`表达式动态命名 |
+| key | 缓存分区（模块）下的具体标识，支持根据<span hl>SpringEL</span>表达式动态命名 |
 | cacheManager | 选择配置类中的缓存配置对象，不选则走默认 |
-| condition | 注解生效的条件，支持`SpringEL`表达式 |
+| condition | 注解生效的条件，支持<span hl>SpringEL</span>表达式 |
 | allEntries | 是否删除缓存中的所有条目 |
 
 ### @Caching
