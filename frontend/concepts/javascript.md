@@ -12,7 +12,7 @@
 
 > **如何取消事件冒泡？**
 
-`event.stopPropagation()`或`event.cancelBubble = true（兼容）`
+`event.stopPropagation()`或`event.cancelBubble = true`（兼容）
 
 ```javascript
 ele.onclick = function (event) {
