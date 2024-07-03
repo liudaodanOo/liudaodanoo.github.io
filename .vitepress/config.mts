@@ -43,6 +43,11 @@ const vitepressOptions = defineConfig({
 						link: '/frontend/problems/javascript',
 						activeMatch: '/frontend/problems',
 					},
+					{
+						text: '整合',
+						link: '/frontend/integration/standard',
+						activeMatch: '/frontend/problems',
+					},
 				],
 			},
 			{

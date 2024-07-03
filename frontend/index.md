@@ -10,3 +10,7 @@
 ## 问题
 
 - [Javascript](/frontend/problems/javascript)
+
+## 整合
+
+- [规范](/frontend/integration/standard)
