@@ -41,7 +41,7 @@ compiler会确保在这些构建中的模块id和chunk id保持一致。通常�
 
 `check`方法，会发送一个HTTP请求来更新manifest。如果请求失败，说明没有可用更新。如果请求成功，会将已更新的chunk列表与当前已加载的chunk列表进行比较。每个已加载的chunk都会下载相应的已更新的chunk。当所有chunk都下载完成后，runtime将切换到<span hl>ready</span>状态。
 
-`apply`方法，会将所有已更新的模块标记为无效。每个无效的模块都需有一个<span hl>update handler</span>，或者在其父模块中有update handler。否则会进行无效标记冒泡，并且父级也会被标记为无效。继续每个冒泡，直到到达最近的含有update handler的模块，随后结束冒泡。若冒泡一直未停则，则最终会到达应用程序入口起点。
+`apply`方法，会将所有已更新的模块标记为无效。每个无效的模块都需有一个<span hl>update handler</span>，或者在其父模块中有update handler。否则会进行无效标记冒泡，并且父级也会被标记为无效。继续每个冒泡，直到到达最近的含有update handler的模块，随后结束冒泡。若冒泡一直未停止，则最终会到达应用程序入口起点。
 
 最后，所有无效的模块都会通过<span hl>dispose handler</span>处理和卸载。然后更新当前hash，并且调用所有<span hl>accept handler</span>。runtime切换为<span hl>idle</span>状态，如此往复。
 
