@@ -13,17 +13,14 @@ npm run build
 echoRed 'cp -r images .vitepress/dist/images'
 cp -r images .vitepress/dist/images
 
-echoRed 'cp -r docs .vitepress/dist/docs'
-cp -r docs .vitepress/dist/docs
-
 echoRed 'cd .vitepress/dist'
 cd .vitepress/dist
 
 echoRed 'git init'
 git init
 
-echoRed 'git remote add github git@github.com:shaw996/shaw996.github.io.git'
-git remote add github git@github.com:shaw996/shaw996.github.io.git
+echoRed 'git remote add origin git@github.com:shaw996/shaw996.github.io.git'
+git remote add origin git@github.com:shaw996/shaw996.github.io.git
 
 echoRed 'git fetch --prune'
 git fetch --prune
