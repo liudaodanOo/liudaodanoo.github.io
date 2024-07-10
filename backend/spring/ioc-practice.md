@@ -367,7 +367,7 @@ a. 声明外部配置<span hl>application.properties</span>文件
 
 ```properties
 # 应用名称
-application.name=LiudaodanOo
+application.name=shaw996
 ```
 
 b. Spring的XML文件中引入外部配置

@@ -8,7 +8,7 @@ import sidebar from './sidebar';
 // 	options: {
 // 		appId: 'Y5IBB10LWN', // Application ID
 // 		apiKey: 'd8fbbb73bf1966863552a496187f5556', // Search API Key
-// 		indexName: 'liudaodanooio', // indexName
+// 		indexName: 'shaw996io', // indexName
 // 	},
 // };
 
@@ -19,14 +19,14 @@ const vitepressOptions = defineConfig({
 			{ rel: 'icon', href: '/images/favicon.ico' },
 		],
 	],
-	title: '🍭🐳刘捣蛋',
+	title: '🍭🐳🍉Shaw996',
 	description: '基于 VitePress + Github Pages',
 	themeConfig: {
 		// https://vitepress.dev/reference/default-theme-config
 		logo: '/images/you.jpg',
 		footer: {
 			message: 'Released under the MIT License.',
-			copyright: `Copyright © 2023-${new Date().getFullYear()} liudaodanOo`,
+			copyright: `Copyright © 2023-${new Date().getFullYear()} Shaw996`,
 		},
 		nav: [
 			{
@@ -46,7 +46,7 @@ const vitepressOptions = defineConfig({
 					{
 						text: '整合',
 						link: '/frontend/integration/standard',
-						activeMatch: '/frontend/problems',
+						activeMatch: '/frontend/integration',
 					},
 				],
 			},
@@ -82,7 +82,7 @@ const vitepressOptions = defineConfig({
 			// },
 		],
 		// @TODO: gitee链接
-		// socialLinks: [{ icon: 'github', link: 'https://gitee.com/liudaodanOo/liudaodanOo' }],
+		// socialLinks: [{ icon: 'github', link: 'https://gitee.com/shaw996/shaw996' }],
 		sidebar,
 		// @ts-ignore
 		// search,

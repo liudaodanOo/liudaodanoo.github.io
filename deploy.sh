@@ -22,11 +22,8 @@ cd .vitepress/dist
 echoRed 'git init'
 git init
 
-echoRed 'git remote add origin git@gitee.com:liudaodanOo/markdown.git'
-git remote add origin git@gitee.com:liudaodanOo/markdown.git
-
-echoRed 'git remote add github git@github.com:liudaodanOo/liudaodanoo.github.io.git'
-git remote add github git@github.com:liudaodanOo/liudaodanoo.github.io.git
+echoRed 'git remote add github git@github.com:shaw996/shaw996.github.io.git'
+git remote add github git@github.com:shaw996/shaw996.github.io.git
 
 echoRed 'git fetch --prune'
 git fetch --prune

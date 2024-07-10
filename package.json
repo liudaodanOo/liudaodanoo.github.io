@@ -1,5 +1,5 @@
 {
-	"name": "markdown",
+	"name": "shaw996",
 	"version": "1.0.0",
 	"description": "基于vitepress的个人随笔",
 	"main": "index.js",
@@ -12,9 +12,9 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git@gitee.com:liudaodanOo/markdown.git"
+		"url": "git@gitee.com:shaw996/markdown.git"
 	},
-	"author": "liudaodanOo",
+	"author": "shaw996",
 	"license": "ISC",
 	"dependencies": {
 		"vitepress": "^1.0.0-rc.31"
