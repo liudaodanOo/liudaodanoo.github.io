@@ -43,9 +43,6 @@ git branch --set-upstream-to=origin/gh-pages gh-pages
 echoRed 'git push -f'
 git push -f
 
-echoRed 'git push -f github'
-git push -f github
-
 cd ../../
 
 echoRed 'rm -rf .vitepress/dist'
