@@ -3,7 +3,7 @@
 layout: home
 
 hero:
-  name: '🍭🐳刘捣蛋'
+  name: '🍭🐳Shaw996'
   text: 'Cherish, Keep...'
   tagline: 越努力越幸运💪
   image:

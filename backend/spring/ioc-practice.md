@@ -200,7 +200,7 @@ public class UserService {
 		<!--
       构造参数传值 di 的配置
         constructor-arg标签：
-          value：直接属性值 String name = "刘捣蛋" int age = 18
+          value：直接属性值 String name = "Shaw996" int age = 18
           ref：引用其他的 bean beanId 值
     -->
 		<constructor-arg ref="userDao"></constructor-arg>
@@ -213,14 +213,14 @@ public class UserService {
         name：参数的名字
     -->
 		<constructor-arg name="age" value="18"></constructor-arg>
-		<constructor-arg name="name" value="刘捣蛋"></constructor-arg>
+		<constructor-arg name="name" value="Shaw996"></constructor-arg>
 		<constructor-arg name="userDao" ref="userDao"></constructor-arg>
 
 		<!--
       方案2：通过构造参数的顺序填写值
     -->
 		<!--        <constructor-arg value="18"></constructor-arg>-->
-		<!--        <constructor-arg value="刘捣蛋"></constructor-arg>-->
+		<!--        <constructor-arg value="Shaw996"></constructor-arg>-->
 		<!--        <constructor-arg ref="userDao"></constructor-arg>-->
 
 		<!--
@@ -228,7 +228,7 @@ public class UserService {
         index：参数的下标
     -->
 		<!--        <constructor-arg index="0" value="18"></constructor-arg>-->
-		<!--        <constructor-arg index="1" value="刘捣蛋"></constructor-arg>-->
+		<!--        <constructor-arg index="1" value="Shaw996"></constructor-arg>-->
 		<!--        <constructor-arg index="2" ref="userDao"></constructor-arg>-->
 	</bean>
 
@@ -240,7 +240,7 @@ public class UserService {
       value | ref 二选一：value 直接属性值，ref 其他 bean 的 id
     -->
 		<property name="age" value="18"></property>
-		<property name="name" value="刘捣蛋"></property>
+		<property name="name" value="Shaw996"></property>
 		<property name="userDao" ref="userDao"></property>
 	</bean>
 </beans>
